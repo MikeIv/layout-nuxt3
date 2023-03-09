@@ -16,7 +16,7 @@
       </ul>
     </div>
     <section class="tools__content">
-      <div class="tools__section" id="vue" v-for="(item, index) in contentList" :key="index">
+      <div class="tools__section" :id="item.id" v-for="(item, index) in contentList" :key="index">
         <div class="tools__logo-wrapper">
           <component :is="item.icon" class="tools__section-logo"></component>
         </div>
@@ -85,16 +85,19 @@ const techList = [
 
 const contentList = [
   {
+    id: 'vue',
     icon: IconsVue,
     name: 'Vue',
     plugIn: [],
   },
   {
+    id: 'nuxt',
     icon: IconsNuxt,
     name: 'Nuxt',
     plugIn: [],
   },
   {
+    id: 'webstorm',
     icon: IconsWebStorm,
     name: 'WebStorm',
     plugIn: [
@@ -108,6 +111,7 @@ const contentList = [
     ],
   },
   {
+    id: 'js',
     icon: IconsJs,
     name: 'Js',
     plugIn: [],
