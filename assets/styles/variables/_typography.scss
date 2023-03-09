@@ -49,13 +49,13 @@
   }
   &__h4 {
     @include unify-parent('h1') {
-      font-size: rem(20);
+      font-size: rem(16);
       font-weight: 600;
-      line-height: rem(24);
+      line-height: rem(18);
 
       @media screen and (min-width: 992px) {
-        font-size: rem(24);
-        line-height: rem(29);
+        font-size: rem(18);
+        line-height: rem(21);
       }
     }
   }
@@ -67,7 +67,7 @@
 
     @media screen and (min-width: 992px) {
       font-size: rem(24);
-      line-height: rem(29);
+      line-height: rem(28);
     }
   }
   &__l {
@@ -76,8 +76,8 @@
     line-height: rem(24);
 
     @media screen and (min-width: 992px) {
-      font-size: rem(18);
-      line-height: rem(24);
+      font-size: rem(21);
+      line-height: rem(26);
     }
   }
   &__m {
@@ -102,7 +102,7 @@
 
   &__s {
     font-size: rem(12);
-    font-weight: 400;
+    font-weight: 500;
     line-height: rem(16);
 
     @media screen and (min-width: 992px) {
