@@ -16,23 +16,24 @@
       </ul>
     </div>
     <section class="tools__content">
-      <div class="tools__section" id="vue">
+      <div class="tools__section" id="vue" v-for="(item, index) in contentList" :key="index">
         <div class="tools__logo-wrapper">
-          <IconsVue class="tools__section-logo" />
+          <component :is="item.icon" class="tools__section-logo"></component>
         </div>
-        <h2 class="tools__subtitle a-font__h3">Vue</h2>
-      </div>
-      <div class="tools__section" id="nuxt">
-        <div class="tools__logo-wrapper">
-          <IconsNuxt class="tools__section-logo" />
+        <h2 class="tools__subtitle a-font__h3">{{ item.name }}</h2>
+        <div class="tools__section-plugin-block" v-if="item.plugIn.length">
+          <h4 class="tools__section-header a-font__h4">Plug-in's</h4>
+          <ul class="tools__section-list-plugin">
+            <li class="tools__section-item-plugin" v-for="plugin in item.plugIn">{{ plugin.name }}</li>
+          </ul>
         </div>
-        <h2 class="tools__subtitle a-font__h3">Nuxt</h2>
-      </div>
-      <div class="tools__section">
-        <h2 class="tools__subtitle a-font__h3">SVG</h2>
-        <component :is="IconsTelegram"></component>
       </div>
     </section>
+
+    <div class="tools__section">
+      <h2 class="tools__subtitle a-font__h3">SVG</h2>
+      <component :is="IconsTelegram"></component>
+    </div>
   </section>
 </template>
 
@@ -78,6 +79,32 @@ const techList = [
     icon: IconsNuxt,
     href: 'https://nuxt.com/',
     title: 'Nuxt Doc',
+  },
+];
+
+const contentList = [
+  {
+    icon: IconsVue,
+    name: 'Vue',
+    plugIn: [],
+  },
+  {
+    icon: IconsNuxt,
+    name: 'Nuxt',
+    plugIn: [],
+  },
+  {
+    icon: IconsWebStorm,
+    name: 'WebStorm',
+    plugIn: [
+      { name: '.env files support' },
+      { name: '.ignore' },
+      { name: 'Atom Material Icons' },
+      { name: 'Color Highlighter' },
+      { name: 'Indent Rainbow' },
+      { name: 'Material Theme UI' },
+      { name: 'Rainbow Brackets' },
+    ],
   },
 ];
 </script>

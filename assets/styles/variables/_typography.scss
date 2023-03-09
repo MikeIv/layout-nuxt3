@@ -49,13 +49,13 @@
   }
   &__h4 {
     @include unify-parent('h1') {
-      font-size: rem(20);
+      font-size: rem(16);
       font-weight: 600;
-      line-height: rem(24);
+      line-height: rem(18);
 
       @media screen and (min-width: 992px) {
-        font-size: rem(24);
-        line-height: rem(29);
+        font-size: rem(18);
+        line-height: rem(21);
       }
     }
   }
