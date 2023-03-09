@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
+import { IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
 
 const techList = [
   {
@@ -63,10 +63,11 @@ const techList = [
     title: 'WebStorm',
   },
   {
+    id: 'js',
     cell: 'item-05',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
+    icon: IconsJs,
+    href: 'https://learn.javascript.ru/',
+    title: 'Js Doc',
   },
   {
     cell: 'item-06',
@@ -105,6 +106,11 @@ const contentList = [
       { name: 'Material Theme UI' },
       { name: 'Rainbow Brackets' },
     ],
+  },
+  {
+    icon: IconsJs,
+    name: 'Js',
+    plugIn: [],
   },
 ];
 </script>
