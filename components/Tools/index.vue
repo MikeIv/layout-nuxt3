@@ -16,7 +16,7 @@
       </ul>
     </div>
     <section class="tools__content">
-      <div class="tools__section" id="vue" v-for="(item, index) in contentList" :key="index">
+      <div class="tools__section" :id="item.id" v-for="(item, index) in contentList" :key="index">
         <div class="tools__logo-wrapper">
           <component :is="item.icon" class="tools__section-logo"></component>
         </div>
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
+import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
 
 const techList = [
   {
@@ -71,30 +71,33 @@ const techList = [
   },
   {
     cell: 'item-06',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
+    icon: IconsHtml,
+    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    title: 'HTML Doc',
   },
   {
     cell: 'item-07',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
+    icon: IconsCss,
+    href: 'https://developer.mozilla.org/ru/docs/Web/CSS',
+    title: 'CSS Doc',
   },
 ];
 
 const contentList = [
   {
+    id: 'vue',
     icon: IconsVue,
     name: 'Vue',
     plugIn: [],
   },
   {
+    id: 'nuxt',
     icon: IconsNuxt,
     name: 'Nuxt',
     plugIn: [],
   },
   {
+    id: 'webstorm',
     icon: IconsWebStorm,
     name: 'WebStorm',
     plugIn: [
@@ -105,11 +108,25 @@ const contentList = [
       { name: 'Indent Rainbow' },
       { name: 'Material Theme UI' },
       { name: 'Rainbow Brackets' },
+      { name: 'Tabnine AI Code Completion' },
     ],
   },
   {
+    id: 'js',
     icon: IconsJs,
     name: 'Js',
+    plugIn: [],
+  },
+  {
+    id: 'html',
+    icon: IconsHtml,
+    name: 'Html',
+    plugIn: [],
+  },
+  {
+    id: 'css',
+    icon: IconsCss,
+    name: 'Css',
     plugIn: [],
   },
 ];
