@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
+import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
 
 const techList = [
   {
@@ -71,15 +71,15 @@ const techList = [
   },
   {
     cell: 'item-06',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
+    icon: IconsHtml,
+    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    title: 'HTML Doc',
   },
   {
     cell: 'item-07',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
+    icon: IconsCss,
+    href: 'https://developer.mozilla.org/ru/docs/Web/CSS',
+    title: 'CSS Doc',
   },
 ];
 
@@ -108,12 +108,25 @@ const contentList = [
       { name: 'Indent Rainbow' },
       { name: 'Material Theme UI' },
       { name: 'Rainbow Brackets' },
+      { name: 'Tabnine AI Code Completion' },
     ],
   },
   {
     id: 'js',
     icon: IconsJs,
     name: 'Js',
+    plugIn: [],
+  },
+  {
+    id: 'html',
+    icon: IconsHtml,
+    name: 'Html',
+    plugIn: [],
+  },
+  {
+    id: 'css',
+    icon: IconsCss,
+    name: 'Css',
     plugIn: [],
   },
 ];
