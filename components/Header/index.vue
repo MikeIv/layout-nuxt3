@@ -1,18 +1,30 @@
 <template>
   <ul class="header">
-    <li class="header__item a-font__s">
-      <NuxtLink to="/tools">Инструменты</NuxtLink>
-    </li>
-    <li class="header__item a-font__s">
-      <NuxtLink to="/sandbox">Песочница</NuxtLink>
+    <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
+      <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
     </li>
   </ul>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-};
+<script setup>
+const routeLinks = [
+  {
+    name: 'Портфолио',
+    route: '/portfolio',
+  },
+  {
+    name: 'Инструменты',
+    route: '/tools',
+  },
+  {
+    name: 'Песочница',
+    route: '/sandbox',
+  },
+  {
+    name: 'Контакты',
+    route: '/contacts',
+  },
+];
 </script>
 
 <style scoped lang="scss">
