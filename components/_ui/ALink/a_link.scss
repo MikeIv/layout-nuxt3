@@ -1,0 +1,12 @@
+.a-link {
+  display: flex;
+
+  &--btn {
+    padding: rem(4) rem(12);
+  }
+
+  &--accent {
+    color: var(--a-mainText);
+    background-color: var(--a-bgAccent);
+  }
+}
