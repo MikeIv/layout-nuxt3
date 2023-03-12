@@ -27,6 +27,14 @@
             <li class="tools__section-item-plugin" v-for="plugin in item.plugIn">{{ plugin.name }}</li>
           </ul>
         </div>
+        <div class="tools__section-plugin-block" v-if="item.links.length">
+          <h4 class="tools__section-header a-font__h4">Ссылки</h4>
+          <ul class="tools__section-list-plugin">
+            <li class="tools__section-item-plugin" v-for="link in item.links">
+              <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="accent" fontSize="s" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -39,6 +47,7 @@
 
 <script setup>
 import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
+import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const techList = [
   {
@@ -89,12 +98,14 @@ const contentList = [
     icon: IconsVue,
     name: 'Vue',
     plugIn: [],
+    links: [],
   },
   {
     id: 'nuxt',
     icon: IconsNuxt,
     name: 'Nuxt',
     plugIn: [],
+    links: [],
   },
   {
     id: 'webstorm',
@@ -110,28 +121,35 @@ const contentList = [
       { name: 'Rainbow Brackets' },
       { name: 'Tabnine AI Code Completion' },
     ],
+    links: [],
   },
   {
     id: 'js',
     icon: IconsJs,
     name: 'Js',
     plugIn: [],
+    links: [],
   },
   {
     id: 'html',
     icon: IconsHtml,
     name: 'Html',
     plugIn: [],
+    links: [],
   },
   {
     id: 'css',
     icon: IconsCss,
     name: 'Css',
     plugIn: [],
+    links: [
+      { text: 'Справочник HTML и CSS', href: 'https://hcdev.ru/' },
+      { text: 'Руководство по Grid', href: 'https://tuhub.ru/posts/css-grid-complete-guide' },
+    ],
   },
 ];
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import './tools.scss';
 </style>
