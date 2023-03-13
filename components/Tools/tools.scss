@@ -1,9 +1,12 @@
 .tools {
   &__title {
-    margin-top: rem(80);
-    margin-bottom: rem(50);
+    margin: rem(70) 0 rem(10) 0;
     color: var(--a-mainAccent);
     user-select: none;
+
+    @media screen and (min-width: $mobile) {
+      margin: rem(80) 0 rem(50) 0;
+    }
   }
   &__subtitle {
     margin-bottom: rem(12);
@@ -18,29 +21,67 @@
 
     &-list {
       display: grid;
-      gap: rem(40) rem(10);
+      gap: rem(20) rem(5);
       grid-template-areas:
-        'title item-01 item-02 item-03'
-        'title item-04 item-05 item-06';
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: rem(140) 1fr 1fr 1fr;
+        'title title'
+        'item-01 item-02'
+        'item-03 item-04'
+        'item-05 item-06';
+      grid-template-rows: rem(50) 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       align-items: stretch;
       width: 100%;
+      padding: 0 rem(30) 0 rem(30);
+
+      @media screen and (min-width: $mobile) {
+        gap: rem(40) rem(10);
+        grid-template-areas:
+          'title item-01 item-02'
+          'title item-03 item-04'
+          'title item-05 item-06';
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: rem(160) 1fr 1fr;
+        padding: 0;
+      }
+
+      @media screen and (min-width: $tablet) {
+        grid-template-areas:
+          'title item-01 item-02 item-03'
+          'title item-04 item-05 item-06';
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: rem(140) 1fr 1fr 1fr;
+      }
     }
     &-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       &.item {
         &-header {
           grid-area: title;
           align-self: center;
           height: 100%;
-          margin-right: rem(12);
+          width: 100%;
+          margin: rem(12) auto 0 auto;
           color: var(--a-mainAccent);
           text-transform: uppercase;
-          border-right: rem(1) solid var(--a-borderMain);
+          border-right: none;
+          border-bottom: rem(1) solid var(--a-borderMain);
+
+          @media screen and (min-width: $mobile) {
+            margin: 0 rem(10) 0 rem(24);
+            border-right: rem(1) solid var(--a-borderMain);
+            border-bottom: none;
+          }
+
+          @media screen and (min-width: $mobile) {
+            margin: 0 rem(12) 0 rem(24);
+          }
+
+          @media screen and (min-width: $tablet) {
+            margin: 0 rem(12) 0 0;
+          }
         }
         &-02 {
           grid-area: item-01;
@@ -78,9 +119,14 @@
 
     &-link-group {
       display: flex;
-      row-gap: rem(12);
-      column-gap: rem(12);
+      row-gap: rem(8);
+      column-gap: rem(8);
       user-select: none;
+
+      @media screen and (min-width: $mobile) {
+        row-gap: rem(12);
+        column-gap: rem(12);
+      }
     }
     &-sourse {
       display: flex;

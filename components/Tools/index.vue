@@ -37,16 +37,11 @@
         </div>
       </div>
     </section>
-
-    <div class="tools__section">
-      <h2 class="tools__subtitle a-font__h3">SVG</h2>
-      <component :is="IconsTelegram"></component>
-    </div>
   </section>
 </template>
 
 <script setup>
-import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsTelegram, IconsVue, IconsWebStorm } from '#components';
+import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsVue, IconsWebStorm } from '#components';
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const techList = [
@@ -98,7 +93,7 @@ const contentList = [
     icon: IconsVue,
     name: 'Vue',
     plugIn: [],
-    links: [],
+    links: [{ text: 'На Хабре', href: 'https://habr.com/ru/hub/vuejs/' }],
   },
   {
     id: 'nuxt',
@@ -135,7 +130,10 @@ const contentList = [
     icon: IconsHtml,
     name: 'Html',
     plugIn: [],
-    links: [],
+    links: [
+      { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
+      { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
+    ],
   },
   {
     id: 'css',
@@ -143,8 +141,11 @@ const contentList = [
     name: 'Css',
     plugIn: [],
     links: [
+      { text: 'На Хабре', href: 'https://habr.com/ru/hub/css/' },
       { text: 'Справочник HTML и CSS', href: 'https://hcdev.ru/' },
       { text: 'Руководство по Grid', href: 'https://tuhub.ru/posts/css-grid-complete-guide' },
+      { text: 'Трюки CSS', href: 'https://habr.com/ru/company/macloud/blog/557796/' },
+      { text: 'SVG иконки', href: 'https://icones.js.org/' },
     ],
   },
 ];
