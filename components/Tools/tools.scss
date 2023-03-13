@@ -27,7 +27,7 @@
         'item-01 item-02'
         'item-03 item-04'
         'item-05 item-06';
-      grid-template-rows: rem(60) 1fr 1fr 1fr;
+      grid-template-rows: rem(50) 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       align-items: stretch;
       width: 100%;
@@ -62,14 +62,17 @@
           grid-area: title;
           align-self: center;
           height: 100%;
-          margin: rem(12) auto;
+          width: 100%;
+          margin: rem(12) auto 0 auto;
           color: var(--a-mainAccent);
           text-transform: uppercase;
           border-right: none;
+          border-bottom: rem(1) solid var(--a-borderMain);
 
           @media screen and (min-width: $mobile) {
             margin: 0 rem(10) 0 rem(24);
             border-right: rem(1) solid var(--a-borderMain);
+            border-bottom: none;
           }
 
           @media screen and (min-width: $mobile) {
