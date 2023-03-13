@@ -8,5 +8,9 @@
   &--accent {
     color: var(--a-mainText);
     background-color: var(--a-bgAccent);
+
+    &:hover {
+      color: var(--a-accentText);
+    }
   }
 }
