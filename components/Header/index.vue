@@ -4,9 +4,14 @@
       <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
     </li>
   </ul>
+
+  {{ widthWin }}
+  {{ resizeWin() }}
 </template>
 
 <script setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+
 const routeLinks = [
   {
     name: 'Портфолио',
@@ -25,6 +30,23 @@ const routeLinks = [
     route: '/contacts',
   },
 ];
+
+const width = ref(null);
+
+const resizeWin = () => {
+  width.value = window.innerWidth;
+
+  onMounted(() => {
+    resizeWin();
+    window.addEventListener('resize', resizeWin);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', resizeWin);
+  });
+
+  return { width };
+};
 </script>
 
 <style scoped lang="scss">
