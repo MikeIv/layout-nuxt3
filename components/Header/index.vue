@@ -3,15 +3,12 @@
     <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
       <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
     </li>
-  </ul>
 
-  {{ widthWin }}
-  {{ resizeWin() }}
+    <p v-if="isMobile">Я Мобилко</p>
+  </ul>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
-
 const routeLinks = [
   {
     name: 'Портфолио',
@@ -31,22 +28,7 @@ const routeLinks = [
   },
 ];
 
-const width = ref(null);
-
-const resizeWin = () => {
-  width.value = window.innerWidth;
-
-  onMounted(() => {
-    resizeWin();
-    window.addEventListener('resize', resizeWin);
-  });
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', resizeWin);
-  });
-
-  return { width };
-};
+const { isMobile, isTabled, isDesktop } = useResponsive();
 </script>
 
 <style scoped lang="scss">
