@@ -9,11 +9,11 @@ export const useResponsive = () => {
   });
 
   const updateWidth = () => {
-    isMobile.value = window.innerWidth <= 640;
+    isMobile.value = window.innerWidth < 768;
 
-    isTabled.value = window.innerWidth > 640 && window.innerWidth <= 1280;
+    isTabled.value = window.innerWidth > 767 && window.innerWidth < 1240;
 
-    isDesktop.value = window.innerWidth > 1280;
+    isDesktop.value = window.innerWidth > 1239;
   };
 
   return {
