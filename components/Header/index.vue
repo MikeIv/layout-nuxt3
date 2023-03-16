@@ -5,14 +5,22 @@
         <span></span>
       </button>
 
-      <div v-if="showNav" class="header__mobile-menu"></div>
+      <nav v-if="showNav" class="header__mobile-menu">
+        <ul class="header__list">
+          <li class="header__item-mob a-font__m-m" v-for="(item, index) in routeLinks" :key="index" @click="toggleNav">
+            <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
+          </li>
+        </ul>
+      </nav>
     </div>
 
-    <ul v-if="isDesktop || isTabled" class="header__nav">
-      <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
-        <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
-      </li>
-    </ul>
+    <nav v-if="isDesktop || isTabled" class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
+          <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
+        </li>
+      </ul>
+    </nav>
   </section>
 </template>
 

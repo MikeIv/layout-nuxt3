@@ -93,7 +93,13 @@ const contentList = [
     icon: IconsVue,
     name: 'Vue',
     plugIn: [],
-    links: [{ text: 'На Хабре', href: 'https://habr.com/ru/hub/vuejs/' }],
+    links: [
+      { text: 'На Хабре', href: 'https://habr.com/ru/hub/vuejs/' },
+      {
+        text: 'Composition API',
+        href: 'https://tproger.ru/articles/kak-sozdat-prilozhenie-vokrug-composition-api-vo-vue-3/',
+      },
+    ],
   },
   {
     id: 'nuxt',
