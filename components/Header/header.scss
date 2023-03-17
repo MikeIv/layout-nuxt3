@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 48px;
+  min-height: rem(48);
   padding: 0 rem(30);
   background-color: var(--a-mainBg);
 
@@ -95,10 +95,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__item {
-    margin: 0 10px;
+    margin: 0 rem(10);
     text-transform: uppercase;
     user-select: none;
 
@@ -114,6 +120,10 @@
       padding: rem(4) 0;
       list-style: none;
       color: var(--a-mainText);
+
+      .router-link-exact-active {
+        color: var(--a-mainAccent);
+      }
     }
   }
 }
