@@ -4,6 +4,7 @@ export const useResponsive = () => {
   const isDesktop = ref(false);
 
   onMounted(() => {
+    console.log('Павел привет');
     updateWidth();
     window.addEventListener('resize', updateWidth);
   });
