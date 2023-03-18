@@ -1,3 +1,20 @@
 .contacts {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__title {
+    margin: rem(70) 0 rem(10) 0;
+    color: var(--a-mainAccent);
+    user-select: none;
+
+    @media screen and (min-width: $mobile) {
+      margin: rem(80) 0 rem(50) 0;
+    }
+  }
+  &__subtitle {
+    margin-bottom: rem(12);
+    color: var(--a-headerText);
+    user-select: none;
+  }
 }
