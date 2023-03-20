@@ -99,6 +99,10 @@ const contentList = [
         text: 'Composition API',
         href: 'https://tproger.ru/articles/kak-sozdat-prilozhenie-vokrug-composition-api-vo-vue-3/',
       },
+      {
+        text: 'Хуки Composition API',
+        href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
+      },
     ],
   },
   {
