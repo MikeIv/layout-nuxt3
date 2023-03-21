@@ -110,7 +110,7 @@ const contentList = [
     icon: IconsNuxt,
     name: 'Nuxt',
     plugIn: [],
-    links: [],
+    links: [{ text: 'Fake API', href: 'https://fakestoreapi.com/' }],
   },
   {
     id: 'webstorm',
