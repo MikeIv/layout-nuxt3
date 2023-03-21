@@ -1,5 +1,5 @@
 <template>
-  <section class="header">
+  <section class="header shadow">
     <div v-if="isMobile" class="header__mobile-toggle">
       <button class="header__toggle-nav" :class="{ active: showNav }" @click="toggleNav" ref="navigation">
         <span></span>

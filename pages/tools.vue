@@ -1,9 +1,9 @@
-<script setup>
-definePageMeta({
-  title: 'tools',
-  layout: 'default',
-});
-</script>
+<!--<script setup>-->
+<!--definePageMeta({-->
+<!--  title: 'tools',-->
+<!--  layout: 'default',-->
+<!--});-->
+<!--</script>-->
 
 <template>
   <Tools />
