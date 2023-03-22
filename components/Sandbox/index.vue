@@ -10,7 +10,8 @@
     </div>
 
     <div class="sandbox__section-test">
-      <p>{{ value }}</p>
+      <p>{{ basearr }}</p>
+      <p>{{ arr }}</p>
     </div>
   </section>
 </template>
@@ -21,8 +22,11 @@ $sayWord('это проверка работы функции');
 const counter = useCounter();
 
 const { numArr } = useTestFunc();
+console.log('numArr', numArr.value);
+// const arr = numArr.value;
+const basearr = numArr.value;
 
-const value = numArr.splice(1, 2);
+const arr = numArr.value.slice(0, 2);
 </script>
 
 <style scoped lang="scss">
