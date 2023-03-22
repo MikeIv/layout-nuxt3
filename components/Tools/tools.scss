@@ -159,7 +159,9 @@
     padding-left: rem(140);
   }
   &__section {
-    margin-bottom: rem(50);
+    margin-bottom: rem(20);
+    padding: rem(30) 0;
+    border-top: rem(1) solid var(--a-borderLight);
     &-logo {
       width: auto;
       height: 100%;
@@ -170,6 +172,8 @@
       display: flex;
       align-items: center;
       width: 100%;
+      padding: rem(4) rem(20);
+      background-color: var(--a-bgLight);
     }
 
     &-header {

@@ -8,4 +8,15 @@
     margin-bottom: rem(50);
     color: var(--a-headerText);
   }
+
+  &__section {
+    &-test {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: rem(500);
+      min-height: rem(300);
+      background-color: var(--a-bgLight);
+    }
+  }
 }

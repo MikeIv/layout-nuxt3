@@ -8,6 +8,10 @@
       <button @click="counter++">+</button>
       <button @click="counter--">-</button>
     </div>
+
+    <div class="sandbox__section-test">
+      <p>{{ value }}</p>
+    </div>
   </section>
 </template>
 
@@ -15,6 +19,10 @@
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
 const counter = useCounter();
+
+const { numArr } = useTestFunc();
+
+const value = numArr.splice(1, 2);
 </script>
 
 <style scoped lang="scss">
