@@ -2,6 +2,13 @@
 import { resolve } from 'path';
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Portfolio',
+      meta: [{ name: 'description', content: 'Мой сайт' }],
+      link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
+    },
+  },
   alias: {
     '@': resolve(__dirname, '/'),
     // assets: '/<rootDir>/assets',

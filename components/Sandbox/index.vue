@@ -16,6 +16,9 @@
       <p class="sandbox__section-text a-font__m">
         Результат: <span>{{ filterdata }}</span>
       </p>
+      <p class="sandbox__section-text a-font__m">
+        Результат 2: <span>{{ transformdata }}</span>
+      </p>
     </div>
   </section>
 </template>
@@ -29,7 +32,9 @@ const { numArr } = useTestFunc();
 console.log('numArr', numArr.value);
 const data = numArr.value;
 
-const filterdata = data[2];
+const filterdata = data.splice(1, 0, 'one', 'two', '12345');
+console.log('DATA', data);
+const transformdata = data.reverse();
 </script>
 
 <style scoped lang="scss">
