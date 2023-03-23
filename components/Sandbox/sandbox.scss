@@ -10,14 +10,24 @@
   }
 
   &__section {
+    display: flex;
     &-test {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-width: rem(500);
       min-height: rem(300);
+      padding: rem(40) rem(80);
       background-color: var(--a-bgLight);
+    }
+    &-text {
+      margin-bottom: rem(18);
+
+      span {
+        padding-left: rem(20);
+        font-weight: bold;
+      }
     }
   }
 }

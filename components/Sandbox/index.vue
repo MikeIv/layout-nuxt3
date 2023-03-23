@@ -10,8 +10,12 @@
     </div>
 
     <div class="sandbox__section-test">
-      <p>{{ basearr }}</p>
-      <p>{{ arr }}</p>
+      <p class="sandbox__section-text a-font__m">
+        Исходные данные: <span>{{ data }}</span>
+      </p>
+      <p class="sandbox__section-text a-font__m">
+        Результат: <span>{{ filterdata }}</span>
+      </p>
     </div>
   </section>
 </template>
@@ -23,10 +27,9 @@ const counter = useCounter();
 
 const { numArr } = useTestFunc();
 console.log('numArr', numArr.value);
-// const arr = numArr.value;
-const basearr = numArr.value;
+const data = numArr.value;
 
-const arr = numArr.value.slice(0, 2);
+const filterdata = data[2];
 </script>
 
 <style scoped lang="scss">
