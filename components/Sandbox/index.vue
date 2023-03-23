@@ -10,7 +10,12 @@
     </div>
 
     <div class="sandbox__section-test">
-      <p>{{ value }}</p>
+      <p class="sandbox__section-text a-font__m">
+        Исходные данные: <span>{{ data }}</span>
+      </p>
+      <p class="sandbox__section-text a-font__m">
+        Результат: <span>{{ filterdata }}</span>
+      </p>
     </div>
   </section>
 </template>
@@ -21,8 +26,10 @@ $sayWord('это проверка работы функции');
 const counter = useCounter();
 
 const { numArr } = useTestFunc();
+console.log('numArr', numArr.value);
+const data = numArr.value;
 
-const value = numArr.splice(1, 2);
+const filterdata = data[2];
 </script>
 
 <style scoped lang="scss">
