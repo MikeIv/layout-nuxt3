@@ -21,7 +21,7 @@
       </p>
 
       <br />
-      <p>{{ data }}</p>
+      <p>{{ currency }}</p>
     </div>
   </section>
 </template>
@@ -41,6 +41,7 @@ const transformdata = dataTest.reverse();
 
 const { data } = await useFetch('/api/testapi');
 console.log('data', data);
+const currency = data.value;
 </script>
 
 <style scoped lang="scss">
