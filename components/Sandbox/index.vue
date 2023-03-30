@@ -21,7 +21,9 @@
       </p>
 
       <br />
-      <p>{{ currency }}</p>
+      <li v-for="item in currency.suggestions" :key="item.index">
+        <p>{{ item.value }}</p>
+      </li>
     </div>
   </section>
 </template>
@@ -39,9 +41,25 @@ const filterdata = dataTest.splice(1, 0, 'one', 'two', '12345');
 console.log('DATA', dataTest);
 const transformdata = dataTest.reverse();
 
-const { data } = await useFetch('/api/testapi');
-console.log('data', data);
+const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
+const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
+const query = 'сбербанк';
+
+const options = {
+  method: 'POST',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Token ' + token,
+  },
+  body: JSON.stringify({ query: query }),
+};
+
+const { data } = await useFetch(url, options);
+console.log('dataDD', data);
 const currency = data.value;
+console.log('currency', currency);
 </script>
 
 <style scoped lang="scss">

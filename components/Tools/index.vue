@@ -35,6 +35,14 @@
             </li>
           </ul>
         </div>
+        <div class="tools__section-plugin-block" v-if="item.npm.length">
+          <h4 class="tools__section-header a-font__h4">Зависимости</h4>
+          <ul class="tools__section-list-plugin">
+            <li class="tools__section-item-plugin" v-for="link in item.npm">
+              <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="primary" fontSize="s" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </section>
@@ -104,6 +112,7 @@ const contentList = [
         href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
       },
     ],
+    npm: [],
   },
   {
     id: 'nuxt',
@@ -111,6 +120,13 @@ const contentList = [
     name: 'Nuxt',
     plugIn: [],
     links: [{ text: 'Fake API', href: 'https://fakestoreapi.com/' }],
+    npm: [
+      { text: 'prettier', href: 'https://www.npmjs.com/package/prettier' },
+      { text: 'autoprefixer', href: 'https://www.npmjs.com/package/autoprefixer' },
+      { text: 'postcss', href: 'https://www.npmjs.com/package/postcss' },
+      { text: 'sass-loader', href: 'https://www.npmjs.com/package/sass-loader' },
+      { text: '@vueuse/nuxt', href: 'https://www.npmjs.com/package/@vueuse/nuxt' },
+    ],
   },
   {
     id: 'webstorm',
@@ -127,6 +143,7 @@ const contentList = [
       { name: 'Tabnine AI Code Completion' },
     ],
     links: [],
+    npm: [],
   },
   {
     id: 'js',
@@ -134,6 +151,7 @@ const contentList = [
     name: 'Js',
     plugIn: [],
     links: [],
+    npm: [],
   },
   {
     id: 'html',
@@ -144,6 +162,7 @@ const contentList = [
       { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
       { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
     ],
+    npm: [],
   },
   {
     id: 'css',
@@ -157,6 +176,7 @@ const contentList = [
       { text: 'Трюки CSS', href: 'https://habr.com/ru/company/macloud/blog/557796/' },
       { text: 'SVG иконки', href: 'https://icones.js.org/' },
     ],
+    npm: [],
   },
 ];
 </script>
