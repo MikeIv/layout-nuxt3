@@ -21,7 +21,7 @@
       </p>
 
       <br />
-      <li v-for="item in currency.suggestions" :key="item.index">
+      <li v-for="item in currency" :key="item.index">
         <p>{{ item.value }}</p>
       </li>
     </div>
@@ -58,7 +58,7 @@ const options = {
 
 const { data } = await useFetch(url, options);
 console.log('dataDD', data);
-const currency = data.value;
+const currency = data.value.suggestions;
 console.log('currency', currency);
 </script>
 
