@@ -11,6 +11,7 @@
 
   &__section {
     display: flex;
+    align-items: center;
     &-test {
       display: flex;
       flex-direction: column;
@@ -18,6 +19,7 @@
       align-items: flex-start;
       min-width: rem(500);
       min-height: rem(300);
+      margin-bottom: rem(30);
       padding: rem(40) rem(80);
       background-color: var(--a-bgLight);
     }
@@ -28,6 +30,26 @@
         padding-left: rem(20);
         font-weight: bold;
       }
+    }
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: rem(60);
+    min-height: rem(60);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-count {
+      min-width: rem(60);
+      min-height: rem(60);
+      background-color: var(--a-bgAccent);
     }
   }
 }

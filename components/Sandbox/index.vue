@@ -3,10 +3,10 @@
     <h1 class="sandbox__title a-font__h1">Vue 3 Nuxt 3</h1>
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 
-    <div>
-      Counter: {{ counter }}
-      <button @click="counter++">+</button>
-      <button @click="counter--">-</button>
+    <div class="sandbox__section">
+      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter">-</button>
+      <p class="sandbox__counter a-font__h3">{{ counter }}</p>
+      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter">+</button>
     </div>
 
     <div class="sandbox__section-test">
@@ -31,7 +31,15 @@
 <script setup>
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
-const counter = useCounter();
+
+const counter = ref(0);
+
+const increaseCounter = () => {
+  counter.value++;
+};
+const decreaseCounter = () => {
+  counter.value--;
+};
 
 const { numArr } = useTestFunc();
 console.log('numArr', numArr.value);
