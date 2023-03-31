@@ -13,4 +13,12 @@
       color: var(--a-accentText);
     }
   }
+  &--primary {
+    color: var(--a-mainAccent);
+    background-color: var(--a-bgAccent);
+
+    &:hover {
+      color: var(--a-mainText);
+    }
+  }
 }

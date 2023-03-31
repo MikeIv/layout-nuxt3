@@ -3,10 +3,10 @@
     <h1 class="sandbox__title a-font__h1">Vue 3 Nuxt 3</h1>
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 
-    <div>
-      Counter: {{ counter }}
-      <button @click="counter++">+</button>
-      <button @click="counter--">-</button>
+    <div class="sandbox__section">
+      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter">-</button>
+      <p class="sandbox__counter a-font__h3">{{ counter }}</p>
+      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter">+</button>
     </div>
 
     <div class="sandbox__section-test">
@@ -21,7 +21,9 @@
       </p>
 
       <br />
-      <p>{{ currency }}</p>
+      <li v-for="item in currency" :key="item.index">
+        <p>{{ item.value }}</p>
+      </li>
     </div>
   </section>
 </template>
@@ -29,7 +31,15 @@
 <script setup>
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
-const counter = useCounter();
+
+const counter = ref(0);
+
+const increaseCounter = () => {
+  counter.value++;
+};
+const decreaseCounter = () => {
+  counter.value--;
+};
 
 const { numArr } = useTestFunc();
 console.log('numArr', numArr.value);
@@ -39,9 +49,25 @@ const filterdata = dataTest.splice(1, 0, 'one', 'two', '12345');
 console.log('DATA', dataTest);
 const transformdata = dataTest.reverse();
 
-const { data } = await useFetch('/api/testapi');
-console.log('data', data);
-const currency = data.value;
+const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
+const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
+const query = 'сбербанк';
+
+const options = {
+  method: 'POST',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Token ' + token,
+  },
+  body: JSON.stringify({ query: query }),
+};
+
+const { data } = await useFetch(url, options);
+console.log('dataDD', data);
+const currency = data.value.suggestions;
+console.log('currency', currency);
 </script>
 
 <style scoped lang="scss">
