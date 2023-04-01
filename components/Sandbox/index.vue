@@ -5,9 +5,9 @@
 
     <div class="sandbox__section">
       <h3 class="sandbox__label a-font__h3">{{ counterData.title }}:</h3>
-      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter">-</button>
+      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter(1)">-</button>
       <p class="sandbox__counter a-font__h3">{{ counterData.count }}</p>
-      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter">+</button>
+      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter(1)">+</button>
     </div>
 
     <div class="sandbox__section-test">
@@ -35,11 +35,11 @@ $sayWord('это проверка работы функции');
 
 const counter = ref(0);
 
-const increaseCounter = () => {
-  counterData.count++;
+const increaseCounter = (amount) => {
+  counterData.count += amount;
 };
-const decreaseCounter = () => {
-  counterData.count--;
+const decreaseCounter = (amount) => {
+  counterData.count -= amount;
 };
 
 const counterData = reactive({
