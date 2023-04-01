@@ -12,6 +12,7 @@
   &__section {
     display: flex;
     align-items: center;
+    margin-bottom: rem(30);
     &-test {
       display: flex;
       flex-direction: column;
@@ -51,5 +52,9 @@
       min-height: rem(60);
       background-color: var(--a-bgAccent);
     }
+  }
+
+  &__label {
+    margin-right: rem(12);
   }
 }
