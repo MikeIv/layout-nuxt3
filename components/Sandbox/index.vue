@@ -10,6 +10,13 @@
       <button class="sandbox__btn-count a-font__h2" @click="increaseCounter(1)">+</button>
     </div>
 
+    <div class="sandbox__section">
+      <h3 class="sandbox__label a-font__h4">Редактирование заголовка</h3>
+      <div class="sandbox__block">
+        <input class="sandbox__input" type="text" v-model="counterData.title" v-avtofocus />
+      </div>
+    </div>
+
     <div class="sandbox__section-test">
       <p class="sandbox__section-text a-font__m">
         Исходные данные: <span>{{ dataTest }}</span>
