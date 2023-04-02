@@ -13,7 +13,7 @@
     <div class="sandbox__section">
       <h3 class="sandbox__label a-font__h4">Редактирование заголовка</h3>
       <div class="sandbox__block">
-        <input class="sandbox__input" type="text" v-model="counterData.title" v-avtofocus />
+        <input class="sandbox__input" type="text" v-model="counterData.title" v-focus />
       </div>
     </div>
 
@@ -39,6 +39,14 @@
 <script setup>
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
+
+// const { vAutofocus } = useAutofocus();
+
+// const vAutofocus = {
+//   mounted: (el) => {
+//     el.focus();
+//   },
+// };
 
 const counter = ref(0);
 
