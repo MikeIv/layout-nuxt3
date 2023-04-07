@@ -1,5 +1,5 @@
 export const portfolioData = () => {
-  const portfolio = ref([
+  const portf = ref([
     {
       name: 'Портфолио 111',
     },
@@ -18,6 +18,6 @@ export const portfolioData = () => {
   ]);
 
   return {
-    portfolio,
+    portf,
   };
 };
