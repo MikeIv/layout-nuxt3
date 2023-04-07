@@ -7,11 +7,28 @@
 
   &__item {
     margin: rem(6) 0;
+    padding: rem(2) rem(8);
     text-transform: uppercase;
     user-select: none;
 
     &:hover {
       color: var(--a-mainAccent);
+      font-weight: 600;
+
+      animation: main-nav__item 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
+  }
+}
+
+@keyframes main-nav__item {
+  0% {
+    -webkit-filter: blur(rem(12));
+    filter: blur(rem(12));
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
