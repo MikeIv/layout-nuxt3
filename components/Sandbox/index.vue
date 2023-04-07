@@ -29,9 +29,11 @@
       </p>
 
       <br />
-      <li v-for="item in currency" :key="item.index">
-        <p>{{ item.value }}</p>
-      </li>
+      <ul class="sandbox__list">
+        <li class="sandbox__item" v-for="item in currency" :key="item.index">
+          <p>{{ item.value }}</p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
