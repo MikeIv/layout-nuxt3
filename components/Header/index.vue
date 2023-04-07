@@ -25,24 +25,7 @@
 </template>
 
 <script setup>
-const routeLinks = [
-  {
-    name: 'Портфолио',
-    route: '/portfolio',
-  },
-  {
-    name: 'Инструменты',
-    route: '/tools',
-  },
-  {
-    name: 'Песочница',
-    route: '/sandbox',
-  },
-  {
-    name: 'Контакты',
-    route: '/contacts',
-  },
-];
+const { routeLinks } = useRouteLinks();
 
 const { isMobile, isTabled, isDesktop } = useResponsive();
 
