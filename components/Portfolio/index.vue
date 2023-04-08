@@ -1,14 +1,26 @@
 <template>
   <section class="portfolio layout__wrapper">
-    <h1 class="portfolio__title a-font__h1">Портфолио</h1>
-    <li v-for="(item, index) in dataList" :key="index">{{ item.name }} - {{ index }}</li>
+    <ul class="portfolio__list">
+      <li class="portfolio__item" v-for="(item, index) in jobs" :key="index">
+        <div class="portfolio__img-wrapper">
+          <img :src="item.img" alt="image" class="portfolio__img" />
+        </div>
+      </li>
+    </ul>
   </section>
 </template>
 
 <script setup>
-const { portfolio } = portfolioData();
-console.log('DATA-PORTFOL', portfolio.value);
-const dataList = portfolio.value;
+/*
+import JSON
+*/
+
+import { portfolio } from '/content/portfolio';
+
+const jobs = portfolio;
+
+const { portf } = portfolioData();
+const dataList = portf.value;
 </script>
 
 <style scoped lang="scss">
