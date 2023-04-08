@@ -12,9 +12,6 @@ export const portfolioData = () => {
     {
       name: '44444',
     },
-    {
-      name: 'Пятый ',
-    },
   ]);
 
   return {
