@@ -1,7 +1,6 @@
 <template>
   <button type="button" :class="classes" :disabled="disabled" @click.prevent.stop="onClickBtn">
     <i :class="icons"></i>
-    <i18n class="a-button__label" :class="fontsize" :path="label" tag="span"> </i18n>
     <span>{{ label }}</span>
   </button>
 </template>
