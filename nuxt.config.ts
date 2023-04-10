@@ -32,21 +32,17 @@ export default defineNuxtConfig({
 
   modules: ['@vueuse/nuxt', '@nuxt/content', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxtjs/tailwindcss'],
   i18n: {
-    locales: ['ru', 'en'],
+    langDir: '/locales/',
+    locales: [
+      { code: 'ru', file: 'ru.json' },
+      { code: 'en', file: 'en.json' },
+    ],
     defaultLocale: 'ru',
-    // lazy: true,
-    // langDir: '/locales/',
+    lazy: true,
     vueI18n: {
       legacy: false,
-      locale: 'en',
-      messages: {
-        ru: {
-          welcome: 'Привет2',
-        },
-        en: {
-          welcome: 'Bienvenue',
-        },
-      },
+      locale: 'ru',
+      messages: {},
     },
   },
 });
