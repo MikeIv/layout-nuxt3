@@ -10,15 +10,19 @@
   padding: 0 rem(30);
   background-color: var(--a-mainBg);
 
+  &.mobile {
+    justify-content: flex-end;
+  }
+
   &__mobile {
     &-toggle {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: auto;
       width: rem(20);
       height: rem(20);
+      margin-left: rem(20);
     }
 
     &-menu {
@@ -99,6 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 
     &-list {
       display: flex;
@@ -129,5 +134,14 @@
         color: var(--a-mainAccent);
       }
     }
+  }
+
+  &__lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    background-color: var(--a-bgLight);
   }
 }
