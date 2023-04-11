@@ -1,5 +1,11 @@
 {
   "button_name": {
     "next": "Next"
+  },
+  "navigation": {
+    "portf": "Portfolio",
+    "tools": "Tools",
+    "sandbox": "Sandbox",
+    "contacts": "Contacts"
   }
 }
