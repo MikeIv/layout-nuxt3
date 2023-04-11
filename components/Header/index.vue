@@ -1,12 +1,25 @@
 <template>
   <section class="header shadow" :class="{ mobile: isMobile }">
     <nav v-if="isDesktop || isTabled" class="header__nav">
+      <!--  Одноязычный вариант    -->
+
+      <!--      <ul class="header__nav-list">-->
+      <!--        <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">-->
+      <!--          <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>-->
+      <!--        </li>-->
+      <!--      </ul>-->
+
+      <!--  Мультиязычный вариант    -->
       <ul class="header__nav-list">
-        <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
-          <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
-        </li>
+        <NuxtLink class="header__item a-font__s" :to="localePath('/portfolio')">{{ $t('navigation.portf') }}</NuxtLink>
+        <NuxtLink class="header__item a-font__s" :to="localePath('/tools')">{{ $t('navigation.tools') }}</NuxtLink>
+        <NuxtLink class="header__item a-font__s" :to="localePath('/sandbox')">{{ $t('navigation.sandbox') }}</NuxtLink>
+        <NuxtLink class="header__item a-font__s" :to="localePath('/contacts')">{{
+          $t('navigation.contacts')
+        }}</NuxtLink>
       </ul>
     </nav>
+
     <a
       class="header__lang"
       href="#"
@@ -33,6 +46,7 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath();
 const { routeLinks } = useRouteLinks();
 
 const { isMobile, isTabled, isDesktop } = useResponsive();
@@ -46,6 +60,7 @@ const toggleNav = () => {
 /*
 Lang Switcher
  */
+
 const { locale, locales, setLocale } = useI18n();
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value);

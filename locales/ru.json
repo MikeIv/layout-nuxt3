@@ -1,5 +1,11 @@
  {
    "button_name": {
      "next": "Далее"
+   },
+   "navigation": {
+     "portf": "Портфолио",
+     "tools": "Инструменты",
+     "sandbox": "Песочница",
+     "contacts": "Контакты"
    }
 }
