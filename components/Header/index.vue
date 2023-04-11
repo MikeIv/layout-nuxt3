@@ -1,5 +1,21 @@
 <template>
-  <section class="header shadow">
+  <section class="header shadow" :class="{ mobile: isMobile }">
+    <nav v-if="isDesktop || isTabled" class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
+          <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+    <a
+      class="header__lang"
+      href="#"
+      v-for="locale in availableLocales"
+      :key="locale.code"
+      @click.prevent.stop="setLocale(locale.code)"
+      >{{ locale.name }}</a
+    >
+
     <div v-if="isMobile" class="header__mobile-toggle">
       <button class="header__toggle-nav" :class="{ active: showNav }" @click="toggleNav" ref="navigation">
         <span></span>
@@ -13,14 +29,6 @@
         </ul>
       </nav>
     </div>
-
-    <nav v-if="isDesktop || isTabled" class="header__nav">
-      <ul class="header__nav-list">
-        <li class="header__item a-font__s" v-for="(item, index) in routeLinks" :key="index">
-          <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
   </section>
 </template>
 
@@ -34,6 +42,14 @@ const showNav = ref(false);
 const toggleNav = () => {
   showNav.value = !showNav.value;
 };
+
+/*
+Lang Switcher
+ */
+const { locale, locales, setLocale } = useI18n();
+const availableLocales = computed(() => {
+  return locales.value.filter((i) => i.code !== locale.value);
+});
 </script>
 
 <style scoped lang="scss">

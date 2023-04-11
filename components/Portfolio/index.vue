@@ -1,9 +1,11 @@
 <template>
   <section class="portfolio layout__wrapper">
+    <a href="#" v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="setLocale(locale.code)">{{
+      locale.name
+    }}</a>
     <ul class="portfolio__list">
       <li class="portfolio__item" v-for="(item, index) in dataList" :key="index">
-        <AButton :label="$t('welcome')" />
-        <p>{{ $t('welcome') }}</p>
+        <AButton :label="$t('button_name.next')" />
         <div class="portfolio__img-wrapper">
           <img :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>
