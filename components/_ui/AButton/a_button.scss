@@ -139,10 +139,10 @@
 
   &--accent {
     color: var(--a-baseLight);
-    background-color: var(--a-bgAccent);
+    background-color: var(--a-bgAccentLight);
     &.hover,
     &:hover {
-      background-color: var(--a-mainAccent);
+      background-color: var(--a-bgAccent);
     }
     &.active,
     &:active {
