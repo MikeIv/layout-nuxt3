@@ -21,9 +21,3 @@
     />
   </svg>
 </template>
-
-<script>
-export default {
-  name: 'Css',
-};
-</script>

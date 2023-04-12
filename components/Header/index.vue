@@ -21,7 +21,7 @@
     </nav>
 
     <a
-      class="header__lang"
+      class="header__lang a-font__s"
       href="#"
       v-for="locale in availableLocales"
       :key="locale.code"

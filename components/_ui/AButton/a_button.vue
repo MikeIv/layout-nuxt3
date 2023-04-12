@@ -1,18 +1,39 @@
 <template>
   <button type="button" :class="classes" :disabled="disabled" @click.prevent.stop="onClickBtn">
     <i :class="icons"></i>
+    <slot></slot>
     <span>{{ label }}</span>
   </button>
 </template>
+
+<script setup>
+/*
+props
+ */
+
+const props = defineProps({
+  bgColor: {
+    type: String,
+    validator: (value) => ['accent', 'primary', 'secondary', 'ghost-accept'].includes(value),
+  },
+  label: {
+    type: String,
+  },
+  onlyIcon: {
+    type: String,
+    validator: (value) => ['rounded', 'square'].includes(value),
+  },
+});
+</script>
 
 <script>
 export default {
   name: 'AButton',
 
   props: {
-    label: {
-      type: String,
-    },
+    // label: {
+    //   type: String,
+    // },
 
     disabled: {
       type: Boolean,
@@ -31,13 +52,7 @@ export default {
       type: String,
       validator: (value) => ['l', 'm', 's'].includes(value),
     },
-    bgColor: {
-      type: String,
-      validator: (value) =>
-        ['accent', 'primary', 'secondary', 'ghost-accept', 'ghost-primary', 'none', 'custom', 'gradient'].includes(
-          value,
-        ),
-    },
+
     addIcon: {
       type: String,
       validator: (value) => ['fonts-icon'].includes(value),

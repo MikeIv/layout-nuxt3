@@ -5,7 +5,10 @@
     }}</a>
     <ul class="portfolio__list">
       <li class="portfolio__item" v-for="(item, index) in dataList" :key="index">
-        <AButton :label="$t('button_name.next')" />
+        <!--        <AButton :label="$t('button_name.next')" />-->
+        <AButton class="portfolio__mob-icon shadow" onlyIcon="rounded" bgColor="accent">
+          <IconsMobile />
+        </AButton>
         <div class="portfolio__img-wrapper">
           <img :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>

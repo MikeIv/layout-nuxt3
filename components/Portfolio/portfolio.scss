@@ -12,10 +12,20 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: calc(50% - rem(10));
     min-height: rem(100);
     border: rem(1) solid var(--a-borderMain);
+  }
+
+  &__mob-icon {
+    position: absolute;
+    top: rem(4);
+    right: rem(4);
+    svg {
+      fill: var(--a-accentText);
+    }
   }
 }
