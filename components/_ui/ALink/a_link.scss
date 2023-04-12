@@ -7,7 +7,7 @@
 
   &--accent {
     color: var(--a-mainText);
-    background-color: var(--a-bgAccent);
+    background-color: var(--a-bgAccentLight);
 
     &:hover {
       color: var(--a-accentText);
@@ -15,7 +15,7 @@
   }
   &--primary {
     color: var(--a-mainAccent);
-    background-color: var(--a-bgAccent);
+    background-color: var(--a-bgAccentLight);
 
     &:hover {
       color: var(--a-mainText);

@@ -1,93 +1,111 @@
 <template>
-  <button type="button" :class="classes" :disabled="disabled" @click.prevent.stop="onClickBtn">
+  <button type="button" :class="classes" :disabled="disabled" @click.prevent.stop="handleClick">
     <i :class="icons"></i>
+    <slot></slot>
     <span>{{ label }}</span>
   </button>
 </template>
 
-<script>
-export default {
-  name: 'AButton',
+<script setup>
+/*
+props
+ */
 
-  props: {
-    label: {
-      type: String,
-    },
-
-    disabled: {
-      type: Boolean,
-      required: false,
-    },
-    size: {
-      type: String,
-      validator: (value) => ['xlarge', 'large', 'medium', 'small'].includes(value),
-    },
-    type: {
-      type: String,
-      default: 'default',
-      validator: (value) => ['accent', 'primary', 'default'].includes(value),
-    },
-    fontSize: {
-      type: String,
-      validator: (value) => ['l', 'm', 's'].includes(value),
-    },
-    bgColor: {
-      type: String,
-      validator: (value) =>
-        ['accent', 'primary', 'secondary', 'ghost-accept', 'ghost-primary', 'none', 'custom', 'gradient'].includes(
-          value,
-        ),
-    },
-    addIcon: {
-      type: String,
-      validator: (value) => ['fonts-icon'].includes(value),
-    },
-    iconPosition: {
-      type: String,
-      validator: (value) => ['left', 'right'].includes(value),
-    },
-    onlyIcon: {
-      type: String,
-      validator: (value) => ['rounded', 'square'].includes(value),
-    },
-    iconType: {
-      type: String,
-    },
+const props = defineProps({
+  bgColor: {
+    type: String,
+    validator: (value) => ['accent', 'primary', 'secondary', 'ghost-accept'].includes(value),
+  },
+  label: {
+    type: String,
+  },
+  onlyIcon: {
+    type: String,
+    validator: (value) => ['rounded', 'square'].includes(value),
+  },
+  disabled: {
+    type: Boolean,
+    required: false,
+  },
+  size: {
+    type: String,
+    validator: (value) => ['xlarge', 'large', 'medium', 'small'].includes(value),
+  },
+  type: {
+    type: String,
+    default: 'default',
+    validator: (value) => ['accent', 'primary', 'default'].includes(value),
+  },
+  fontSize: {
+    type: String,
+    validator: (value) => ['l', 'm', 's'].includes(value),
   },
 
-  computed: {
-    classes() {
-      return {
-        'a-button': true,
-        [`a-button--${this.size || 'medium'}`]: true,
-        [`a-button--${this.bgColor}`]: true,
-        [`a-button--${this.addIcon}`]: true,
-        [`a-button--${this.onlyIcon}`]: true,
-        [`a-button--${this.type}`]: true,
-      };
-    },
-    fontsize() {
-      return {
-        [`a-font__btn-${this.fontSize}`]: true,
-      };
-    },
-    icons() {
-      return {
-        'a-button__icon': true,
-        [`a-button__icon--${this.addIcon}`]: true,
-        [`a-button__icon--${this.iconPosition}`]: true,
-        [`${this.iconType}`]: true,
-      };
-    },
+  addIcon: {
+    type: String,
+    validator: (value) => ['fonts-icon'].includes(value),
   },
+  iconPosition: {
+    type: String,
+    validator: (value) => ['left', 'right'].includes(value),
+  },
+  iconType: {
+    type: String,
+  },
+});
 
-  methods: {
-    onClickBtn() {
-      this.$emit('click');
-    },
-  },
+/*
+emit
+ */
+
+const emit = defineEmits(['handleClick']);
+const handleClick = () => {
+  console.log('handleClick');
+  emit('handleClick');
 };
+
+/*
+computed
+ */
+
+const classes = computed(() => {
+  return {
+    'a-button': true,
+    [`a-button--${props.size || 'medium'}`]: true,
+    [`a-button--${props.bgColor}`]: true,
+    [`a-button--${props.addIcon}`]: true,
+    [`a-button--${props.onlyIcon}`]: true,
+    [`a-button--${props.type}`]: true,
+  };
+});
+
+const fontsize = computed(() => {
+  return {
+    [`a-font__btn-${props.fontSize}`]: true,
+  };
+});
+
+const icons = computed(() => {
+  return {
+    'a-button__icon': true,
+    [`a-button__icon--${props.addIcon}`]: true,
+    [`a-button__icon--${props.iconPosition}`]: true,
+    [`${props.iconType}`]: true,
+  };
+});
 </script>
+
+<!--<script>-->
+<!--export default {-->
+<!--  name: 'AButton',-->
+
+<!--  methods: {-->
+<!--    onClickBtn() {-->
+<!--      this.$emit('click');-->
+<!--    },-->
+<!--  },-->
+<!--};-->
+<!--</script>-->
 
 <style scoped lang="scss">
 @import './a_button.scss';

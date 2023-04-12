@@ -142,6 +142,8 @@
     align-items: center;
     width: rem(40);
     height: rem(40);
+    color: var(--a-accentText);
+    text-transform: uppercase;
     background-color: var(--a-bgLight);
   }
 }
