@@ -35,6 +35,13 @@ export const portfolioData = () => {
       description: 'Коммерческий проект. Дизайн. Верстка',
       link: 'https://mikeiv.github.io/almatyathletics/',
     },
+    {
+      name: 'Stickerlabel',
+      img: '006.jpg',
+      imgMob: '006-mob.jpg',
+      description: 'Коммерческий проект. Дизайн. Верстка',
+      link: 'https://mikeiv.github.io/stickerlabel/',
+    },
   ]);
 
   return {
