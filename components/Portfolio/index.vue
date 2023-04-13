@@ -14,8 +14,16 @@
           <IconsMobile v-if="!toggleView(index)" />
           <IconsDesktop v-if="toggleView(index)" />
         </AButton>
-        <AButton class="portfolio__item-info-toggle shadow" onlyIcon="rounded" bgColor="accent">
-          <IconsInformation />
+        <AButton
+          v-if="item.name"
+          :index="index"
+          @handleClick="switchDescription(index)"
+          class="portfolio__item-info-toggle shadow"
+          onlyIcon="rounded"
+          bgColor="accent"
+        >
+          <IconsInformation v-if="!toggleDescription(index)" />
+          <IconsClose v-if="toggleDescription(index)" />
         </AButton>
         <div class="portfolio__img-wrapper">
           <img
@@ -26,6 +34,9 @@
           />
           <img v-else :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>
+        <article class="portfolio__description" v-if="toggleDescription(index)">
+          <h4 class="portfolio__description-title a-font__h4">{{ item.name }}</h4>
+        </article>
       </li>
     </ul>
   </section>
@@ -59,20 +70,30 @@ mobileVersion
 // };
 
 const showMobile = ref(false);
+const showDescription = ref(false);
 const selectItem = ref(null);
 
 const switchShow = (index) => {
+  selectItem.value = index;
+  showMobile.value = !showMobile.value;
+};
+
+const switchDescription = (index) => {
   console.log(index);
   selectItem.value = index;
   console.log('selectItem.value', selectItem.value);
-  console.log('showMobile.value', showMobile.value);
-  showMobile.value = !showMobile.value;
-  const setSwitch = showMobile.value;
+  console.log('showDescription.value', showDescription.value);
+  showDescription.value = !showDescription.value;
 };
 
 const toggleView = (index) => {
   console.log('TOGGLE', index);
   if (selectItem.value === index) return showMobile.value;
+};
+
+const toggleDescription = (index) => {
+  console.log('TOGGLE', index);
+  if (selectItem.value === index) return showDescription.value;
 };
 </script>
 
