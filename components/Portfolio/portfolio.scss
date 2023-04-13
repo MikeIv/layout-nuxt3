@@ -60,7 +60,22 @@
     justify-content: flex-start;
     width: 100%;
     min-height: rem(50);
-    padding: rem(16);
+    padding: rem(16) rem(50) rem(12) rem(16);
     background-color: var(--a-bgLight);
+
+    &-head {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: rem(8);
+    }
+
+    &-title {
+      margin-right: rem(12);
+      color: var(--a-accentText);
+    }
+    &-text {
+      color: var(--a-mainText);
+    }
   }
 }

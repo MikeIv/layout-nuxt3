@@ -35,7 +35,11 @@
           <img v-else :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>
         <article class="portfolio__description" v-if="toggleDescription(index)">
-          <h4 class="portfolio__description-title a-font__h4">{{ item.name }}</h4>
+          <div class="portfolio__description-head">
+            <h4 class="portfolio__description-title a-font__h4">{{ item.name }}</h4>
+            <Alink :href="item.link" linkText="посмотреть" type="btn" bgColor="primary" fontSize="s" />
+          </div>
+          <p class="portfolio__description-text a-font__m">{{ item.description }}</p>
         </article>
       </li>
     </ul>
@@ -49,6 +53,7 @@ import JSON
 
 import { portfolio } from '/content/portfolio';
 import AButton from '~/components/_ui/AButton/a_button.vue';
+import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const jobs = portfolio;
 

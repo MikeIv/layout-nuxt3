@@ -23,8 +23,9 @@ export default {
   justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
+  padding-bottom: rem(80);
   &__logo {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;

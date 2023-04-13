@@ -2,7 +2,7 @@
   <button type="button" :class="classes" :disabled="disabled" @click.prevent.stop="handleClick">
     <i :class="icons"></i>
     <slot></slot>
-    <span>{{ label }}</span>
+    <span class="a-button__label">{{ label }}</span>
   </button>
 </template>
 
@@ -94,18 +94,6 @@ const icons = computed(() => {
   };
 });
 </script>
-
-<!--<script>-->
-<!--export default {-->
-<!--  name: 'AButton',-->
-
-<!--  methods: {-->
-<!--    onClickBtn() {-->
-<!--      this.$emit('click');-->
-<!--    },-->
-<!--  },-->
-<!--};-->
-<!--</script>-->
 
 <style scoped lang="scss">
 @import './a_button.scss';

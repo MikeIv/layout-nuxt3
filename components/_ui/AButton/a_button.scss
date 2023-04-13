@@ -138,10 +138,11 @@
   // bgColor & condition
 
   &--accent {
-    color: var(--a-baseLight);
+    color: var(--a-mainText);
     background-color: var(--a-bgAccentLight);
     &.hover,
     &:hover {
+      color: var(--a-white);
       background-color: var(--a-bgAccent);
     }
     &.active,
