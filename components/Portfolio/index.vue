@@ -62,17 +62,10 @@ Data reactive
  */
 const { portf } = portfolioData();
 const dataList = portf.value.reverse();
-console.log('dataList', dataList);
 
 /*
 mobileVersion
  */
-
-// const showMobile = () => {
-//   const showMobileVersion = ref(true);
-//   showMobileVersion.value = !showMobileVersion.value;
-//   console.log(showMobileVersion.value);
-// };
 
 const showMobile = ref(false);
 const showDescription = ref(false);
@@ -84,20 +77,15 @@ const switchShow = (index) => {
 };
 
 const switchDescription = (index) => {
-  console.log(index);
   selectItem.value = index;
-  console.log('selectItem.value', selectItem.value);
-  console.log('showDescription.value', showDescription.value);
   showDescription.value = !showDescription.value;
 };
 
 const toggleView = (index) => {
-  console.log('TOGGLE', index);
   if (selectItem.value === index) return showMobile.value;
 };
 
 const toggleDescription = (index) => {
-  console.log('TOGGLE', index);
   if (selectItem.value === index) return showDescription.value;
 };
 </script>

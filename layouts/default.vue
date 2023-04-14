@@ -28,7 +28,12 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    max-width: rem(80);
     z-index: 10;
+
+    @media screen and (min-width: $mobile) {
+      max-width: rem(100);
+    }
   }
   &__wrapper {
     display: flex;

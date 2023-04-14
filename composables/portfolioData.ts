@@ -42,6 +42,34 @@ export const portfolioData = () => {
       description: 'Коммерческий проект. Дизайн. Верстка',
       link: 'https://mikeiv.github.io/stickerlabel/',
     },
+    {
+      name: 'Void',
+      img: '007.jpg',
+      imgMob: '007-mob.jpg',
+      description: 'Коммерческий проект. Дизайн. Верстка',
+      link: 'https://mikeiv.github.io/void/',
+    },
+    {
+      name: 'Круизный дом',
+      img: '008.jpg',
+      imgMob: '008-mob.jpg',
+      description: 'Коммерческий проект. Верстка. Создание логики взаимодействия компонентов на нативном js',
+      link: 'https://www.mcruises.ru/',
+    },
+    {
+      name: 'Elza Lashes',
+      img: '009.jpg',
+      imgMob: '009-mob.jpg',
+      description: 'Коммерческий проект. Дизайн. Верстка',
+      link: 'https://mikeiv.github.io/Elza Lashes/',
+    },
+    {
+      name: 'Армянские новости',
+      img: '010.jpg',
+      imgMob: '010-mob.jpg',
+      description: 'Коммерческий проект. Верстка по утвержденному дизайну',
+      link: 'https://armenia.im/',
+    },
   ]);
 
   return {
