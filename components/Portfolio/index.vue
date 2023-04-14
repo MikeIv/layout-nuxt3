@@ -35,7 +35,11 @@
           <img v-else :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>
         <article class="portfolio__description" v-if="toggleDescription(index)">
-          <h4 class="portfolio__description-title a-font__h4">{{ item.name }}</h4>
+          <div class="portfolio__description-head">
+            <h4 class="portfolio__description-title a-font__h4">{{ item.name }}</h4>
+            <Alink :href="item.link" linkText="посмотреть" type="btn" bgColor="primary" fontSize="s" />
+          </div>
+          <p class="portfolio__description-text a-font__m">{{ item.description }}</p>
         </article>
       </li>
     </ul>
@@ -49,6 +53,7 @@ import JSON
 
 import { portfolio } from '/content/portfolio';
 import AButton from '~/components/_ui/AButton/a_button.vue';
+import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const jobs = portfolio;
 
@@ -57,17 +62,10 @@ Data reactive
  */
 const { portf } = portfolioData();
 const dataList = portf.value.reverse();
-console.log('dataList', dataList);
 
 /*
 mobileVersion
  */
-
-// const showMobile = () => {
-//   const showMobileVersion = ref(true);
-//   showMobileVersion.value = !showMobileVersion.value;
-//   console.log(showMobileVersion.value);
-// };
 
 const showMobile = ref(false);
 const showDescription = ref(false);
@@ -79,20 +77,15 @@ const switchShow = (index) => {
 };
 
 const switchDescription = (index) => {
-  console.log(index);
   selectItem.value = index;
-  console.log('selectItem.value', selectItem.value);
-  console.log('showDescription.value', showDescription.value);
   showDescription.value = !showDescription.value;
 };
 
 const toggleView = (index) => {
-  console.log('TOGGLE', index);
   if (selectItem.value === index) return showMobile.value;
 };
 
 const toggleDescription = (index) => {
-  console.log('TOGGLE', index);
   if (selectItem.value === index) return showDescription.value;
 };
 </script>

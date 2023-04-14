@@ -23,11 +23,17 @@ export default {
   justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
+  padding-bottom: rem(80);
   &__logo {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    max-width: rem(80);
     z-index: 10;
+
+    @media screen and (min-width: $mobile) {
+      max-width: rem(100);
+    }
   }
   &__wrapper {
     display: flex;
