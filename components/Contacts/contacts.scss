@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: rem(80) 0;
 
   &__title {
     margin: rem(70) 0 rem(10) 0;
@@ -16,5 +17,19 @@
     margin-bottom: rem(12);
     color: var(--a-headerText);
     user-select: none;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(40);
+    background-color: var(--a-bgLight);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
