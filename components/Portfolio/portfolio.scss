@@ -32,9 +32,6 @@
 
     &-info {
       &-toggle {
-        position: absolute;
-        bottom: rem(4);
-        right: rem(4);
         z-index: 3;
         &:hover {
           svg {
@@ -44,6 +41,12 @@
         svg {
           fill: var(--a-accentText);
         }
+        &.a-button {
+          position: absolute;
+          bottom: rem(4);
+          right: rem(4);
+        }
+
       }
     }
   }
