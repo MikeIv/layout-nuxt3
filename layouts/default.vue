@@ -43,10 +43,12 @@ export default {
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
+    padding: rem(100) rem(12);
 
     @media screen and (min-width: $tablet) {
       max-width: rem(768);
-      padding: 0 rem(40);
+      padding: rem(100) rem(40);
+
     }
     @media screen and (min-width: $tabletMax) {
       max-width: rem(832);

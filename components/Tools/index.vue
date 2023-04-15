@@ -1,6 +1,6 @@
 <template>
   <section class="tools layout__wrapper">
-    <h1 class="tools__title a-font__h1">Инструменты</h1>
+    <h1 class="tools__title a-font__h1 hidden">Инструменты</h1>
     <div class="tools__header">
       <ul class="tools__header-list">
         <li class="tools__header-item item-header">Технологии</li>
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-import { IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsVue, IconsWebStorm } from '#components';
+import {IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsVue, IconsWebStorm} from '#components';
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const techList = [
