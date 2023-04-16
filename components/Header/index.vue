@@ -35,10 +35,17 @@
       </button>
 
       <nav v-if="showNav" class="header__mobile-menu">
-        <ul class="header__list">
-          <li class="header__item-mob a-font__m-m" v-for="(item, index) in routeLinks" :key="index" @click="toggleNav">
-            <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>
-          </li>
+        <ul class="header__nav-list header__nav-list--mob">
+<!--          <li class="header__item-mob a-font__m-m" v-for="(item, index) in routeLinks" :key="index" @click="toggleNav">-->
+<!--            <NuxtLink :to="item.route">{{ item.name }}</NuxtLink>-->
+<!--          </li>-->
+
+          <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/portfolio')">{{ $t('navigation.portf') }}</NuxtLink>
+          <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/tools')">{{ $t('navigation.tools') }}</NuxtLink>
+          <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/sandbox')">{{ $t('navigation.sandbox') }}</NuxtLink>
+          <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/contacts')">{{
+              $t('navigation.contacts')
+            }}</NuxtLink>
         </ul>
       </nav>
     </div>

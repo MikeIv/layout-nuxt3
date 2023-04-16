@@ -65,11 +65,9 @@ const counterData = reactive({
 });
 
 const { numArr } = useTestFunc();
-console.log('numArr', numArr.value);
 const dataTest = numArr.value;
 
 const filterdata = dataTest.splice(1, 0, 'one', 'two', '12345');
-console.log('DATA', dataTest);
 const transformdata = dataTest.reverse();
 
 const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
@@ -88,9 +86,7 @@ const options = {
 };
 
 const { data } = await useFetch(url, options);
-console.log('dataDD', data);
 const currency = data.value.suggestions;
-console.log('currency', currency);
 </script>
 
 <style scoped lang="scss">

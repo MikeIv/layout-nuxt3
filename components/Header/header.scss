@@ -110,6 +110,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &--mob {
+        flex-direction: column;
+      }
     }
   }
 

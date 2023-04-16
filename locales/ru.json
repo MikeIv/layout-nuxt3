@@ -7,5 +7,10 @@
      "tools": "Инструменты",
      "sandbox": "Песочница",
      "contacts": "Контакты"
+   },
+   "tools": {
+     "technologies": "Технологии",
+     "links": "Ссылки",
+     "dependencies": "Зависимости"
    }
 }

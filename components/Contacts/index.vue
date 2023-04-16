@@ -7,6 +7,10 @@
         <IconsTelegram />
         <p class="contacts__txt">@Mike_Iv</p>
       </a>
+      <a href="mailto:mike@ivanov-post.ru" class="contacts__item" target="_blank">
+        <IconsMail />
+        <p class="contacts__txt">mike@ivanov-post.ru</p>
+      </a>
     </div>
   </section>
 </template>

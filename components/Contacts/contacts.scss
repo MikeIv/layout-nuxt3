@@ -21,6 +21,7 @@
 
   &__section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: rem(40);
@@ -31,5 +32,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: rem(12) 0;
   }
 }
