@@ -3,7 +3,7 @@
     <h1 class="tools__title a-font__h1 hidden">Инструменты</h1>
     <div class="tools__header">
       <ul class="tools__header-list">
-        <li class="tools__header-item item-header">Технологии</li>
+        <li class="tools__header-item item-header">{{ $t('tools.technologies') }}</li>
         <li class="tools__header-item" :class="item.cell" v-for="(item, index) in techList" :key="index">
           <div class="tools__header-img-wrapper">
             <component :is="item.icon"></component>
@@ -28,7 +28,7 @@
           </ul>
         </div>
         <div class="tools__section-plugin-block" v-if="item.links.length">
-          <h4 class="tools__section-header a-font__h4">Ссылки</h4>
+          <h4 class="tools__section-header a-font__h4">{{$t('tools.links') }}</h4>
           <ul class="tools__section-list-plugin">
             <li class="tools__section-item-plugin" v-for="link in item.links">
               <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="accent" fontSize="s" />
@@ -36,7 +36,7 @@
           </ul>
         </div>
         <div class="tools__section-plugin-block" v-if="item.npm.length">
-          <h4 class="tools__section-header a-font__h4">Зависимости</h4>
+          <h4 class="tools__section-header a-font__h4">{{$t('tools.dependencies') }}</h4>
           <ul class="tools__section-list-plugin">
             <li class="tools__section-item-plugin" v-for="link in item.npm">
               <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="primary" fontSize="s" />

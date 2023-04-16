@@ -7,5 +7,10 @@
     "tools": "Tools",
     "sandbox": "Sandbox",
     "contacts": "Contacts"
+  },
+  "tools": {
+    "technologies": "Technologies",
+    "links": "Links",
+    "dependencies": "Dependencies"
   }
 }
