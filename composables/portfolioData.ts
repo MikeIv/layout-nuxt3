@@ -70,6 +70,13 @@ export const portfolioData = () => {
       description: 'Коммерческий проект. Верстка по утвержденному дизайну',
       link: 'https://armenia.im/',
     },
+    {
+      name: 'SynergyHUB',
+      img: '011.jpg',
+      imgMob: '011-mob.jpg',
+      description: 'Коммерческий проект. Командная работа. Разработка компонентов. Создание методов. Подключение API',
+      link: 'https://synergyhub.ru/',
+    },
   ]);
 
   return {

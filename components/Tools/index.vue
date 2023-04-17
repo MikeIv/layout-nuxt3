@@ -175,6 +175,7 @@ const contentList = [
       { text: 'Руководство по Grid', href: 'https://tuhub.ru/posts/css-grid-complete-guide' },
       { text: 'Трюки CSS', href: 'https://habr.com/ru/company/macloud/blog/557796/' },
       { text: 'SVG иконки', href: 'https://icones.js.org/' },
+      { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
     ],
     npm: [],
   },
