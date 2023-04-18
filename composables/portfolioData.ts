@@ -77,6 +77,13 @@ export const portfolioData = () => {
       description: 'Коммерческий проект. Командная работа. Разработка компонентов. Создание методов. Подключение API',
       link: 'https://synergyhub.ru/',
     },
+    {
+      name: 'SynergyGlobalTrade',
+      img: '012.jpg',
+      imgMob: '012-mob.jpg',
+      description: 'Коммерческий проект. Командная работа. Разработка компонентов. Создание методов. Подключение API',
+      link: 'https://sglobaltrade.ru/',
+    },
   ]);
 
   return {
