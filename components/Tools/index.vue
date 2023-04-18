@@ -82,12 +82,14 @@ const techList = [
     title: 'Js Doc',
   },
   {
+    id: 'html',
     cell: 'item-06',
     icon: IconsHtml,
     href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
     title: 'HTML Doc',
   },
   {
+    id: 'css',
     cell: 'item-07',
     icon: IconsCss,
     href: 'https://developer.mozilla.org/ru/docs/Web/CSS',
