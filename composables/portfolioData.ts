@@ -91,6 +91,21 @@ export const portfolioData = () => {
       description: 'Коммерческий проект. Командная работа. Разработка компонентов. Создание методов. Подключение API',
       link: 'https://synergystart.ru/',
     },
+    {
+      name: 'SynergyFrends',
+      img: '014.jpg',
+      imgMob: '014-mob.jpg',
+      description: 'Коммерческий проект. Командная работа. Доработка интерфейса',
+      link: 'https://friends.synergy.ru/',
+    },
+    {
+      name: 'SynergyFrendsLK',
+      img: '015.jpg',
+      imgMob: '015-mob.jpg',
+      description: 'Коммерческий проект. Командная работа. Новый проект на основе логики страрого, с добавлением' +
+          ' новых модулей. Для авторизованных пользователей.',
+      link: 'https://friends.synergy.ru/my/',
+    },
   ]);
 
   return {
