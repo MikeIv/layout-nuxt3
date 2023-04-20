@@ -34,13 +34,24 @@
           <p>{{ item.value }}</p>
         </li>
       </ul>
+
+      {{ $t('portfolio') }}
+    <div class="sandbox__section-test">
+      <ul class="sandbox__list">
+        <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
+          <p>{{ item.name }}</p>
+        </li>
+      </ul>
+    </div>
     </div>
   </section>
 </template>
 
 <script setup>
+
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
+
 
 // const { vAutofocus } = useAutofocus();
 

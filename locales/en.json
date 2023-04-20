@@ -12,5 +12,17 @@
     "technologies": "Technologies",
     "links": "Links",
     "dependencies": "Dependencies"
-  }
+  },
+  "portfolio":
+  [
+    {
+      "name": "Portf1"
+    },
+    {
+      "name": "Portf2"
+    },
+    {
+      "name": "Portf3"
+    }
+  ]
 }
