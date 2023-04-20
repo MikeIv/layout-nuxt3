@@ -1,15 +1,13 @@
 <template>
   <section class="main flex w-full">
-    <img src="~/assets/images/my-logo.svg" alt="My Logo" class="main__logo" />
+    <img v-if="!isMobile" src="~/assets/images/my-logo.svg" alt="My Logo" class="main__logo" />
     <p class="main__attention">В разработке</p>
     <MainNav />
   </section>
 </template>
 
-<script>
-export default {
-  name: 'index',
-};
+<script setup>
+const { isMobile } = useResponsive();
 </script>
 
 <style scoped lang="scss">
