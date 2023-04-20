@@ -1,7 +1,7 @@
 <template>
   <section class="main flex w-full">
     <img v-if="!isMobile" src="~/assets/images/my-logo.svg" alt="My Logo" class="main__logo" />
-    <p class="main__attention">В разработке</p>
+    <p class="main__attention">В разработке <span>(v0.1.2)</span></p>
     <MainNav />
   </section>
 </template>
@@ -33,6 +33,10 @@ const { isMobile } = useResponsive();
     text-transform: uppercase;
     opacity: 35%;
     user-select: none;
+
+    span {
+      text-transform: none;
+    }
   }
 }
 </style>
