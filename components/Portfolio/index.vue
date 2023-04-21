@@ -47,21 +47,27 @@
 </template>
 
 <script setup>
+// import {useI18n} from 'vue-i18n'
 /*
 import JSON
 */
-
-import { portfolio } from '/content/portfolio';
 import AButton from '~/components/_ui/AButton/a_button.vue';
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
-const jobs = portfolio;
 
 /*
 Data reactive
  */
 const { portf } = portfolioData();
-const dataList = portf.value.reverse();
+const dataList = portf.value;
+
+console.log('dataList', dataList);
+
+/*
+Data from i18n
+ */
+const { tm } = useI18n()
+const workList = tm('portfolio');
 
 /*
 mobileVersion
