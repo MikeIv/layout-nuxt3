@@ -16,13 +16,109 @@
   "portfolio":
   [
     {
-      "name": "Portf1"
+      "name": "SynergyHUB",
+      "img": "011.jpg",
+      "imgMob": "011-mob.jpg",
+      "description": "Commercial project. Teamwork. Development of components. Creating methods. Connecting the API",
+      "link": "https://synergyhub.ru/"
     },
     {
-      "name": "Portf2"
+      "name": "SynergyFrends",
+      "img": "014.jpg",
+      "imgMob": "014-mob.jpg",
+      "description": "Commercial project. Teamwork. Interface refinement.",
+      "link": "https://friends.synergy.ru/"
     },
     {
-      "name": "Portf3"
+      "name": "SynergyFrendsLK",
+      "img": "015.jpg",
+      "imgMob": "015-mob.jpg",
+      "description": "Commercial project. Teamwork. A new project based on the logic of the old one, with the addition of new modules. For authorized users.",
+      "link": "https://friends.synergy.ru/my/"
+    },
+    {
+      "name": "SynergyGlobalTrade",
+      "img": "012.jpg",
+      "imgMob": "012-mob.jpg",
+      "description": "Commercial project. Teamwork. Development of components. Creating methods. Connecting the API",
+      "link": "https://sglobaltrade.ru/"
+    },
+    {
+      "name": "SynergyStart",
+      "img": "013.jpg",
+      "imgMob": "013-mob.jpg",
+      "description": "Commercial project. Teamwork. Development of components. Creating methods. Connecting the API",
+      "link": "https://synergystart.ru/"
+    },
+    {
+      "name": "Armenian news",
+      "img": "010.jpg",
+      "imgMob": "010-mob.jpg",
+      "description": "Commercial project. Layout according to the approved design",
+      "link": "https://armenia.im/"
+    },
+    {
+      "name": "Elza Lashes",
+      "img": "009.jpg",
+      "imgMob": "009-mob.jpg",
+      "description": "Commercial project. Design. Layout",
+      "link": "https://mikeiv.github.io/Elza Lashes/"
+    },
+    {
+      "name": "Круизный дом",
+      "img": "008.jpg",
+      "imgMob": "008-mob.jpg",
+      "description": "Commercial project. Layout. Creating component interaction logic in native js",
+      "link": "https://www.mcruises.ru/"
+    },
+    {
+      "name": "Void",
+      "img": "007.jpg",
+      "imgMob": "007-mob.jpg",
+      "description": "Commercial project. Design. Layout",
+      "link": "https://mikeiv.github.io/void/"
+    },
+    {
+      "name": "Stickerlabel",
+      "img": "006.jpg",
+      "imgMob": "006-mob.jpg",
+      "description": "Commercial project. Design. Layout",
+      "link": "https://mikeiv.github.io/stickerlabel/"
+    },
+    {
+      "name": "Almatyathletics",
+      "img": "005.jpg",
+      "imgMob": "005-mob.jpg",
+      "description": "Commercial project. Design. Layout",
+      "link": "https://mikeiv.github.io/almatyathletics/"
+    },
+    {
+      "name": "Pink",
+      "img": "004.jpg",
+      "imgMob": "004-mob.jpg",
+      "description": "HTML Academy Graduation Project. Static layout with adaptive",
+      "link": "https://mikeiv.github.io/pink/"
+    },
+    {
+      "name": "VoGoo",
+      "img": "001.jpg",
+      "imgMob": "001-mob.jpg",
+      "description": "Commercial project. Design. Layout",
+      "link": "https://mikeiv.github.io/VoGoo/"
+    },
+    {
+      "name": "Nerds",
+      "img": "003.jpg",
+      "imgMob": "",
+      "description": "HTML Academy Graduation Project. Static layout with adaptive",
+      "link": "https://mikeiv.github.io/nerds/"
+    },
+    {
+      "name": "Gllacy",
+      "img": "002.jpg",
+      "imgMob": "",
+      "description": "HTML Academy Graduation Project. Static layout",
+      "link": "https://mikeiv.github.io/gllacy/"
     }
   ]
 }
