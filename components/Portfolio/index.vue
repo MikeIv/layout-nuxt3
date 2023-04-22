@@ -1,8 +1,7 @@
 <template>
   <section class="portfolio layout__wrapper">
     <ul class="portfolio__list">
-      <li class="portfolio__item" v-for="(item, index) in dataList" :key="index">
-        <!--        <AButton :label="$t('button_name.next')" />-->
+      <li class="portfolio__item" v-for="(item, index) in workList" :key="index">
         <AButton
           v-if="item.imgMob"
           :index="index"
@@ -47,7 +46,6 @@
 </template>
 
 <script setup>
-// import {useI18n} from 'vue-i18n'
 /*
 import JSON
 */
@@ -56,15 +54,13 @@ import Alink from '~/components/_ui/ALink/a_link.vue';
 
 
 /*
-Data reactive
+Data reactive i18n not working
  */
 const { portf } = portfolioData();
 const dataList = portf.value;
 
-console.log('dataList', dataList);
-
 /*
-Data from i18n
+Data from i18n working
  */
 const { tm } = useI18n()
 const workList = tm('portfolio');

@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from 'path';
+import {resolve} from 'path';
 
 export default defineNuxtConfig({
   app: {
@@ -32,11 +32,11 @@ export default defineNuxtConfig({
 
   modules: ['@vueuse/nuxt', '@nuxt/content', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxtjs/tailwindcss'],
   i18n: {
-    langDir: '/locales/',
     locales: [
       { code: 'ru', name: 'Ru', file: 'ru.json' },
       { code: 'en', name: 'Eng', file: 'en.json' },
     ],
+    langDir: '/locales/',
     defaultLocale: 'ru',
     lazy: true,
     vueI18n: {
