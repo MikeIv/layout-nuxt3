@@ -24,6 +24,7 @@
     "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {
+    "nuxt-icons": "^3.2.1",
     "pinia": "^2.0.33"
   },
   "overrides": {
