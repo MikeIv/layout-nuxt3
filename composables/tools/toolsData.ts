@@ -31,6 +31,13 @@ export const toolsData = () => {
                 { text: 'sass-loader', href: 'https://www.npmjs.com/package/sass-loader' },
                 { text: '@vueuse/nuxt', href: 'https://www.npmjs.com/package/@vueuse/nuxt' },
             ],
+            modules: [
+                { text: '@nuxt/content', href: 'https://nuxt.com/modules/content' },
+                { text: '@nuxtjs/i18n', href: 'https://nuxt.com/modules/i18n' },
+                { text: '@pinia/nuxt', href: 'https://nuxt.com/modules/pinia' },
+                { text: '@nuxtjs/tailwindcss', href: 'https://nuxt.com/modules/tailwindcss' },
+                { text: 'nuxt-icons', href: 'https://nuxt.com/modules/icons' },
+            ],
         },
         {
             id: 'webstorm',
@@ -54,7 +61,9 @@ export const toolsData = () => {
             icon: 'js',
             name: 'Js',
             plugIn: [],
-            links: [],
+            links: [
+                { text: 'Шпаргалки JS&TS', href: 'https://my-js.org/' },
+            ],
             npm: [],
         },
         {

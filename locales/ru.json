@@ -11,7 +11,8 @@
    "tools": {
      "technologies": "Технологии",
      "links": "Ссылки",
-     "dependencies": "Зависимости"
+     "dependencies": "Зависимости",
+     "modules": "Модули"
    },
    "portfolio":
      [

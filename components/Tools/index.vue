@@ -44,6 +44,14 @@
             </li>
           </ul>
         </div>
+        <div class="tools__section-plugin-block" v-if="item.modules">
+          <h4 class="tools__section-header a-font__h4">{{$t('tools.modules') }}</h4>
+          <ul class="tools__section-list-plugin">
+            <li class="tools__section-item-plugin" v-for="link in item.modules">
+              <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="primary" fontSize="s" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </section>
