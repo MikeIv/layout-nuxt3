@@ -16,7 +16,6 @@ export const toolsData = () => {
                     href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
                 },
             ],
-            npm: [],
         },
         {
             id: 'nuxt',
@@ -30,6 +29,13 @@ export const toolsData = () => {
                 { text: 'postcss', href: 'https://www.npmjs.com/package/postcss' },
                 { text: 'sass-loader', href: 'https://www.npmjs.com/package/sass-loader' },
                 { text: '@vueuse/nuxt', href: 'https://www.npmjs.com/package/@vueuse/nuxt' },
+            ],
+            modules: [
+                { text: '@nuxt/content', href: 'https://nuxt.com/modules/content' },
+                { text: '@nuxtjs/i18n', href: 'https://nuxt.com/modules/i18n' },
+                { text: '@pinia/nuxt', href: 'https://nuxt.com/modules/pinia' },
+                { text: '@nuxtjs/tailwindcss', href: 'https://nuxt.com/modules/tailwindcss' },
+                { text: 'nuxt-icons', href: 'https://nuxt.com/modules/icons' },
             ],
         },
         {
@@ -47,15 +53,15 @@ export const toolsData = () => {
                 { name: 'Tabnine AI Code Completion' },
             ],
             links: [],
-            npm: [],
         },
         {
             id: 'js',
             icon: 'js',
             name: 'Js',
             plugIn: [],
-            links: [],
-            npm: [],
+            links: [
+                { text: 'Шпаргалки JS&TS', href: 'https://my-js.org/' },
+            ],
         },
         {
             id: 'html',
@@ -66,7 +72,6 @@ export const toolsData = () => {
                 { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
                 { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
             ],
-            npm: [],
         },
         {
             id: 'css',
@@ -81,7 +86,6 @@ export const toolsData = () => {
                 { text: 'SVG иконки', href: 'https://icones.js.org/' },
                 { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
             ],
-            npm: [],
         },
     ])
 
