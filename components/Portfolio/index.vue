@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio layout__wrapper">
+  <section class="portfolio layout__wrapper" v-if="workList">
     <ul class="portfolio__list">
       <li class="portfolio__item" v-for="(item, index) in workList" :key="index">
         <AButton
