@@ -7,7 +7,6 @@
         <li class="tools__header-item" :class="item.cell" v-for="(item, index) in titleList" :key="index" v-if="titleList">
           <div class="tools__header-img-wrapper">
             <nuxt-icon :name="item.icon" filled />
-<!--            <img :src="`$(item.icon)`" alt="">-->
 <!--            <component :is="item.icon"></component>-->
           </div>
           <div class="tools__header-link-group">
@@ -18,9 +17,9 @@
       </ul>
     </div>
     <section class="tools__content">
-      <div class="tools__section" :id="item.id" v-for="(item, index) in contentList" :key="index">
+      <div class="tools__section" :id="item.id" v-for="(item, index) in toolsContent" :key="index">
         <div class="tools__logo-wrapper">
-          <component :is="item.icon" class="tools__section-logo"></component>
+          <nuxt-icon :name="item.icon" filled />
         </div>
         <h2 class="tools__subtitle a-font__h3">{{ item.name }}</h2>
         <div class="tools__section-plugin-block" v-if="item.plugIn.length">
@@ -51,100 +50,13 @@
 </template>
 
 <script setup>
-import {IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsVue, IconsWebStorm} from '#components';
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const { toolsTitle } = toolsTitleList();
 const titleList = toolsTitle.value;
 
-console.log('titleList', titleList);
-
-
-const contentList = [
-  {
-    id: 'vue',
-    icon: IconsVue,
-    name: 'Vue',
-    plugIn: [],
-    links: [
-      { text: 'На Хабре', href: 'https://habr.com/ru/hub/vuejs/' },
-      {
-        text: 'Composition API',
-        href: 'https://tproger.ru/articles/kak-sozdat-prilozhenie-vokrug-composition-api-vo-vue-3/',
-      },
-      {
-        text: 'Хуки Composition API',
-        href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
-      },
-    ],
-    npm: [],
-  },
-  {
-    id: 'nuxt',
-    icon: IconsNuxt,
-    name: 'Nuxt',
-    plugIn: [],
-    links: [{ text: 'Fake API', href: 'https://fakestoreapi.com/' }],
-    npm: [
-      { text: 'prettier', href: 'https://www.npmjs.com/package/prettier' },
-      { text: 'autoprefixer', href: 'https://www.npmjs.com/package/autoprefixer' },
-      { text: 'postcss', href: 'https://www.npmjs.com/package/postcss' },
-      { text: 'sass-loader', href: 'https://www.npmjs.com/package/sass-loader' },
-      { text: '@vueuse/nuxt', href: 'https://www.npmjs.com/package/@vueuse/nuxt' },
-    ],
-  },
-  {
-    id: 'webstorm',
-    icon: IconsWebStorm,
-    name: 'WebStorm',
-    plugIn: [
-      { name: '.env files support' },
-      { name: '.ignore' },
-      { name: 'Atom Material Icons' },
-      { name: 'Color Highlighter' },
-      { name: 'Indent Rainbow' },
-      { name: 'Material Theme UI' },
-      { name: 'Rainbow Brackets' },
-      { name: 'Tabnine AI Code Completion' },
-    ],
-    links: [],
-    npm: [],
-  },
-  {
-    id: 'js',
-    icon: IconsJs,
-    name: 'Js',
-    plugIn: [],
-    links: [],
-    npm: [],
-  },
-  {
-    id: 'html',
-    icon: IconsHtml,
-    name: 'Html',
-    plugIn: [],
-    links: [
-      { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
-      { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
-    ],
-    npm: [],
-  },
-  {
-    id: 'css',
-    icon: IconsCss,
-    name: 'Css',
-    plugIn: [],
-    links: [
-      { text: 'На Хабре', href: 'https://habr.com/ru/hub/css/' },
-      { text: 'Справочник HTML и CSS', href: 'https://hcdev.ru/' },
-      { text: 'Руководство по Grid', href: 'https://tuhub.ru/posts/css-grid-complete-guide' },
-      { text: 'Трюки CSS', href: 'https://habr.com/ru/company/macloud/blog/557796/' },
-      { text: 'SVG иконки', href: 'https://icones.js.org/' },
-      { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
-    ],
-    npm: [],
-  },
-];
+const { toolsDescription } = toolsData();
+const toolsContent = toolsDescription.value;
 </script>
 
 <style lang="scss">
