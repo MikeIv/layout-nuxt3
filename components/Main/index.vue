@@ -1,7 +1,7 @@
 <template>
   <section class="main flex w-full">
     <img v-if="!isMobile" src="~/assets/images/my-logo.svg" alt="My Logo" class="main__logo" />
-    <p class="main__attention">В разработке <span>(v0.1.2)</span></p>
+    <p class="main__attention a-font__s">В разработке <span>(v0.1.2)</span></p>
     <MainNav />
   </section>
 </template>
