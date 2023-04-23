@@ -16,7 +16,6 @@ export const toolsData = () => {
                     href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
                 },
             ],
-            npm: [],
         },
         {
             id: 'nuxt',
@@ -54,7 +53,6 @@ export const toolsData = () => {
                 { name: 'Tabnine AI Code Completion' },
             ],
             links: [],
-            npm: [],
         },
         {
             id: 'js',
@@ -64,7 +62,6 @@ export const toolsData = () => {
             links: [
                 { text: 'Шпаргалки JS&TS', href: 'https://my-js.org/' },
             ],
-            npm: [],
         },
         {
             id: 'html',
@@ -75,7 +72,6 @@ export const toolsData = () => {
                 { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
                 { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
             ],
-            npm: [],
         },
         {
             id: 'css',
@@ -90,7 +86,6 @@ export const toolsData = () => {
                 { text: 'SVG иконки', href: 'https://icones.js.org/' },
                 { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
             ],
-            npm: [],
         },
     ])
 
