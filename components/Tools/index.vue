@@ -4,9 +4,11 @@
     <div class="tools__header">
       <ul class="tools__header-list">
         <li class="tools__header-item item-header">{{ $t('tools.technologies') }}</li>
-        <li class="tools__header-item" :class="item.cell" v-for="(item, index) in techList" :key="index">
+        <li class="tools__header-item" :class="item.cell" v-for="(item, index) in titleList" :key="index" v-if="titleList">
           <div class="tools__header-img-wrapper">
-            <component :is="item.icon"></component>
+            <nuxt-icon :name="item.icon" filled />
+<!--            <img :src="`$(item.icon)`" alt="">-->
+<!--            <component :is="item.icon"></component>-->
           </div>
           <div class="tools__header-link-group">
             <a :href="`${item.href}`" class="tools__header-sourse a-font__s" target="_blank">{{ item.title }}</a>
@@ -52,50 +54,11 @@
 import {IconsCss, IconsHtml, IconsJs, IconsNuxt, IconsVue, IconsWebStorm} from '#components';
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
-const techList = [
-  {
-    id: 'vue',
-    cell: 'item-02',
-    icon: IconsVue,
-    href: 'https://v3.ru.vuejs.org/',
-    title: 'Vue.js Doc',
-  },
-  {
-    id: 'nuxt',
-    cell: 'item-03',
-    icon: IconsNuxt,
-    href: 'https://nuxt.com/',
-    title: 'Nuxt Doc',
-  },
-  {
-    id: 'webstorm',
-    cell: 'item-04',
-    icon: IconsWebStorm,
-    href: 'https://www.jetbrains.com/webstorm/',
-    title: 'WebStorm',
-  },
-  {
-    id: 'js',
-    cell: 'item-05',
-    icon: IconsJs,
-    href: 'https://learn.javascript.ru/',
-    title: 'Js Doc',
-  },
-  {
-    id: 'html',
-    cell: 'item-06',
-    icon: IconsHtml,
-    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-    title: 'HTML Doc',
-  },
-  {
-    id: 'css',
-    cell: 'item-07',
-    icon: IconsCss,
-    href: 'https://developer.mozilla.org/ru/docs/Web/CSS',
-    title: 'CSS Doc',
-  },
-];
+const { toolsTitle } = toolsTitleList();
+const titleList = toolsTitle.value;
+
+console.log('titleList', titleList);
+
 
 const contentList = [
   {

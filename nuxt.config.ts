@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@vueuse/nuxt', '@nuxt/content', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxtjs/tailwindcss'],
+  modules: ['@vueuse/nuxt', '@nuxt/content', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxtjs/tailwindcss', 'nuxt-icons'],
   i18n: {
     locales: [
       { code: 'ru', name: 'Ru', file: 'ru.json' },
