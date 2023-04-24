@@ -16,41 +16,45 @@
 
   &__header {
     display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: rem(100);
 
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(20);
+      padding: rem(10) rem(20);
+      color: var(--a-mainAccent);
+      text-transform: uppercase;
+      border-right: 0;
+      border-bottom: rem(1) solid var(--a-borderMain);
+
+      @media screen and (min-width: $tablet) {
+        margin-right: rem(20);
+        width: rem(180);
+        margin-bottom: 0;
+        border-right: rem(1) solid var(--a-borderMain);
+        border-bottom: 0;
+      }
+    }
 
     &-list {
-      display: grid;
-      gap: rem(20) rem(5);
-      grid-template-areas:
-        'title title'
-        'item-01 item-02'
-        'item-03 item-04'
-        'item-05 item-06';
-      grid-template-rows: rem(50) 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      width: 100%;
-      padding: 0 rem(8) 0 rem(8);
+      display: flex;
+      gap: rem(30);
+      flex-wrap: wrap;
 
       @media screen and (min-width: $mobile) {
-        gap: rem(40) rem(10);
-        grid-template-areas:
-          'title item-01 item-02'
-          'title item-03 item-04'
-          'title item-05 item-06';
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: rem(160) 1fr 1fr;
-        padding: 0;
       }
 
       @media screen and (min-width: $tablet) {
-        grid-template-areas:
-          'title item-01 item-02 item-03'
-          'title item-04 item-05 item-06';
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: rem(140) 1fr 1fr 1fr;
       }
     }
     &-item {
@@ -59,47 +63,6 @@
       justify-content: center;
       align-items: flex-start;
       padding: 0 rem(10);
-      &.item {
-        &-header {
-          grid-area: title;
-          align-self: center;
-          height: 100%;
-          width: 100%;
-          margin: rem(12) auto 0 auto;
-          color: var(--a-mainAccent);
-          text-transform: uppercase;
-          border-right: none;
-          border-bottom: rem(1) solid var(--a-borderMain);
-
-          @media screen and (min-width: $mobile) {
-            margin: 0 rem(8) 0 rem(16);
-            border-right: rem(1) solid var(--a-borderMain);
-            border-bottom: none;
-          }
-
-          @media screen and (min-width: $tablet) {
-            margin: 0 rem(20) 0 0;
-          }
-        }
-        &-02 {
-          grid-area: item-01;
-        }
-        &-03 {
-          grid-area: item-02;
-        }
-        &-04 {
-          grid-area: item-03;
-        }
-        &-05 {
-          grid-area: item-04;
-        }
-        &-06 {
-          grid-area: item-05;
-        }
-        &-07 {
-          grid-area: item-06;
-        }
-      }
     }
 
     &-img-wrapper {
@@ -122,11 +85,6 @@
         }
       }
     }
-    //&-image {
-    //  object-fit: cover;
-    //  height: 100%;
-    //}
-
 
     &-link-group {
       display: flex;

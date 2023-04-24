@@ -2,12 +2,18 @@
   <section class="tools layout__wrapper">
     <h1 class="tools__title a-font__h1 hidden">Инструменты</h1>
     <div class="tools__header">
+      <li class="tools__header-title">{{ $t('tools.technologies') }}</li>
       <ul class="tools__header-list">
-        <li class="tools__header-item item-header">{{ $t('tools.technologies') }}</li>
-        <li class="tools__header-item" :class="item.cell" v-for="(item, index) in titleList" :key="index" v-if="titleList">
+        <li
+          class="tools__header-item"
+          :class="item.cell"
+          v-for="(item, index) in titleList"
+          :key="index"
+          v-if="titleList"
+        >
           <div class="tools__header-img-wrapper">
             <nuxt-icon :name="item.icon" filled />
-<!--            <component :is="item.icon"></component>-->
+            <!--            <component :is="item.icon"></component>-->
           </div>
           <div class="tools__header-link-group">
             <a :href="`${item.href}`" class="tools__header-sourse a-font__s" target="_blank">{{ item.title }}</a>
@@ -29,7 +35,7 @@
           </ul>
         </div>
         <div class="tools__section-plugin-block" v-if="item.links.length">
-          <h4 class="tools__section-header a-font__h4">{{$t('tools.links') }}</h4>
+          <h4 class="tools__section-header a-font__h4">{{ $t('tools.links') }}</h4>
           <ul class="tools__section-list-plugin">
             <li class="tools__section-item-plugin" v-for="link in item.links">
               <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="accent" fontSize="s" />
@@ -37,7 +43,7 @@
           </ul>
         </div>
         <div class="tools__section-plugin-block" v-if="item.npm">
-          <h4 class="tools__section-header a-font__h4">{{$t('tools.dependencies') }}</h4>
+          <h4 class="tools__section-header a-font__h4">{{ $t('tools.dependencies') }}</h4>
           <ul class="tools__section-list-plugin">
             <li class="tools__section-item-plugin" v-for="link in item.npm">
               <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="primary" fontSize="s" />
@@ -45,7 +51,7 @@
           </ul>
         </div>
         <div class="tools__section-plugin-block" v-if="item.modules">
-          <h4 class="tools__section-header a-font__h4">{{$t('tools.modules') }}</h4>
+          <h4 class="tools__section-header a-font__h4">{{ $t('tools.modules') }}</h4>
           <ul class="tools__section-list-plugin">
             <li class="tools__section-item-plugin" v-for="link in item.modules">
               <Alink :href="link.href" :linkText="link.text" type="btn" bgColor="primary" fontSize="s" />
@@ -62,6 +68,7 @@ import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const { toolsTitle } = toolsTitleList();
 const titleList = toolsTitle.value;
+console.log('toolsTitle', toolsTitle);
 
 const { toolsDescription } = toolsData();
 const toolsContent = toolsDescription.value;
