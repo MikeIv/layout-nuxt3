@@ -1,6 +1,5 @@
 <script setup>
 definePageMeta({
-  // title: 'Главная страница',
   title: 'Главная страница',
   layout: 'home',
 });
@@ -9,11 +8,5 @@ definePageMeta({
 <template>
   <Main />
 </template>
-
-<script>
-export default {
-  name: 'MainPage',
-};
-</script>
 
 <style scoped></style>
