@@ -141,6 +141,28 @@
     }
   }
 
+  &__block {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    margin-right: rem(8);
+    background-color: var(--a-bgLight);
+
+    .nuxt-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
   &__lang {
     display: flex;
     justify-content: center;

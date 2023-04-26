@@ -20,13 +20,19 @@
       </ul>
     </nav>
 
-    <NuxtLink
-      class="header__lang a-font__s"
-      v-for="locale in availableLocales"
-      :key="locale.code"
-      :to="switchLocalePath(locale.code)"
-      >{{ locale.name }}
-    </NuxtLink>
+    <div class="header__block">
+      <a href="https://github.com/MikeIv" class="header__link" target="_blank">
+        <nuxt-icon name="github" class="icon-logo" />
+      </a>
+
+      <NuxtLink
+        class="header__lang a-font__s"
+        v-for="locale in availableLocales"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
+        >{{ locale.name }}
+      </NuxtLink>
+    </div>
 
     <div v-if="isMobile" class="header__mobile-toggle">
       <button class="header__toggle-nav" :class="{ active: showNav }" @click="toggleNav" ref="navigation">
