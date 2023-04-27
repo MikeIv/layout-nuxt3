@@ -110,6 +110,6 @@ const { data } = await useFetch(url, options);
 const currency = data.value.suggestions;
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import './sandbox.scss';
 </style>
