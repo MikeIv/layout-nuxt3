@@ -2,6 +2,9 @@
    "button_name": {
      "next": "Далее"
    },
+   "info": {
+     "develop": "В разработке"
+   },
    "navigation": {
      "portf": "Портфолио",
      "tools": "Инструменты",

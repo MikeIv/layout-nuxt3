@@ -9,6 +9,10 @@ export const useRouteLinks = () => {
       route: '/tools',
     },
     {
+      name: 'Полезное',
+      route: '/useful',
+    },
+    {
       name: 'Песочница',
       route: '/sandbox',
     },
