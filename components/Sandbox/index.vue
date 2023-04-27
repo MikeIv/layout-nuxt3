@@ -18,17 +18,15 @@
     </div>
 
     <div class="sandbox__section">
-      <div class="sandbox__section-row">
-        <p class="sandbox__section-text a-font__m">
-          Исходные данные: <span>{{ dataTest }}</span>
-        </p>
-        <p class="sandbox__section-text a-font__m">
-          Результат: <span>{{ filterdata }}</span>
-        </p>
-        <p class="sandbox__section-text a-font__m">
-          Результат 2: <span>{{ transformdata }}</span>
-        </p>
-      </div>
+      <p class="sandbox__section-text a-font__m">
+        Исходные данные: <span>{{ dataTest }}</span>
+      </p>
+      <p class="sandbox__section-text a-font__m">
+        Результат: <span>{{ filterdata }}</span>
+      </p>
+      <p class="sandbox__section-text a-font__m">
+        Результат 2: <span>{{ transformdata }}</span>
+      </p>
 
       <br />
       <ul class="sandbox__list">
@@ -37,20 +35,16 @@
         </li>
       </ul>
 
-      <div class="sandbox__section-row">
-        <ul class="sandbox__list">
-          <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
-            <p>{{ item.name }}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="sandbox__section-row">
-        <ul class="sandbox__list">
-          <li class="sandbox__item">
-            <p>{{ resultData }}</p>
-          </li>
-        </ul>
-      </div>
+      <ul class="sandbox__list">
+        <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
+          <p>{{ item.name }}</p>
+        </li>
+      </ul>
+      <ul class="sandbox__list">
+        <li class="sandbox__item">
+          <p>{{ resultData }}</p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
