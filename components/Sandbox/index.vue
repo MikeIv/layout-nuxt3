@@ -17,16 +17,18 @@
       </div>
     </div>
 
-    <div class="sandbox__section-test">
-      <p class="sandbox__section-text a-font__m">
-        Исходные данные: <span>{{ dataTest }}</span>
-      </p>
-      <p class="sandbox__section-text a-font__m">
-        Результат: <span>{{ filterdata }}</span>
-      </p>
-      <p class="sandbox__section-text a-font__m">
-        Результат 2: <span>{{ transformdata }}</span>
-      </p>
+    <div class="sandbox__section">
+      <div class="sandbox__section-row">
+        <p class="sandbox__section-text a-font__m">
+          Исходные данные: <span>{{ dataTest }}</span>
+        </p>
+        <p class="sandbox__section-text a-font__m">
+          Результат: <span>{{ filterdata }}</span>
+        </p>
+        <p class="sandbox__section-text a-font__m">
+          Результат 2: <span>{{ transformdata }}</span>
+        </p>
+      </div>
 
       <br />
       <ul class="sandbox__list">
