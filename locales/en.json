@@ -2,6 +2,9 @@
   "button_name": {
     "next": "Next"
   },
+  "info": {
+    "develop": "In progress"
+  },
   "navigation": {
     "portf": "Portfolio",
     "tools": "Tools",

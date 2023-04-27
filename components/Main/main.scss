@@ -1,0 +1,68 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-left: 10px solid var(--a-white);
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    max-width: rem(100);
+  }
+
+  &__attention {
+    margin-top: rem(40);
+    color: var(--a-accentText);
+    text-transform: uppercase;
+    opacity: 30%;
+    user-select: none;
+
+    span {
+      text-transform: none;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: rem(40);
+    height: rem(40);
+    margin: rem(10);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(30);
+    height: rem(30);
+    margin-right: rem(8);
+
+    .nuxt-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
+  &__lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    color: var(--a-accentText);
+    text-transform: uppercase;
+    background-color: var(--a-bgLight);
+  }
+}
