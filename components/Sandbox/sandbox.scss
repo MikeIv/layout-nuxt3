@@ -29,6 +29,21 @@
         padding: rem(40) rem(80);
       }
     }
+    &-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      min-height: rem(300);
+      margin-bottom: rem(30);
+      padding: rem(30) rem(12);
+      background-color: var(--a-white);
+
+      @media screen and (min-width: $mobile) {
+        padding: rem(40) rem(80);
+      }
+    }
     &-text {
       margin-bottom: rem(18);
 

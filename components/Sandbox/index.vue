@@ -1,6 +1,6 @@
 <template>
   <section class="sandbox layout__wrapper">
-    <h1 class="sandbox__title a-font__h1">Vue 3 Nuxt 3</h1>
+    <h1 class="sandbox__title a-font__h1 hidden">Vue 3 Nuxt 3</h1>
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 
     <div class="sandbox__section">
@@ -35,32 +35,33 @@
         </li>
       </ul>
 
-      {{ $t('portfolio') }}
-    <div class="sandbox__section-test">
-      <ul class="sandbox__list">
-        <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
-          <p>{{ item.name }}</p>
-        </li>
-      </ul>
-    </div>
+      <div class="sandbox__section-row">
+        <ul class="sandbox__list">
+          <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
+            <p>{{ item.name }}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="sandbox__section-row">
+        <ul class="sandbox__list">
+          <li class="sandbox__item">
+            <p>{{ resultData }}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { checkResult } from '../../composables/sandbox/checkResult';
 
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
 
-
-// const { vAutofocus } = useAutofocus();
-
-// const vAutofocus = {
-//   mounted: (el) => {
-//     el.focus();
-//   },
-// };
-
+/*
+Counter
+ */
 const counter = ref(0);
 
 const increaseCounter = (amount) => {
@@ -81,6 +82,13 @@ const dataTest = numArr.value;
 const filterdata = dataTest.splice(1, 0, 'one', 'two', '12345');
 const transformdata = dataTest.reverse();
 
+const { resultData } = checkResult();
+
+console.log('resultData: ' + resultData());
+
+/*
+Get Data from reactive
+ */
 const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
 const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
 const query = 'сбербанк';
