@@ -34,16 +34,16 @@
     justify-content: center;
     align-items: center;
     min-width: rem(40);
-    min-height: rem(40);
-    padding: rem(10);
+    height: rem(40);
+    margin: rem(10);
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(40);
-    height: rem(40);
+    width: rem(30);
+    height: rem(30);
     margin-right: rem(8);
 
     .nuxt-icon {
