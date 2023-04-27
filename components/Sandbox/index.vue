@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="sandbox__section-test">
+    <div class="sandbox__section">
       <p class="sandbox__section-text a-font__m">
         Исходные данные: <span>{{ dataTest }}</span>
       </p>
@@ -35,20 +35,16 @@
         </li>
       </ul>
 
-      <div class="sandbox__section-row">
-        <ul class="sandbox__list">
-          <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
-            <p>{{ item.name }}</p>
-          </li>
-        </ul>
-      </div>
-      <div class="sandbox__section-row">
-        <ul class="sandbox__list">
-          <li class="sandbox__item">
-            <p>{{ resultData }}</p>
-          </li>
-        </ul>
-      </div>
+      <ul class="sandbox__list">
+        <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
+          <p>{{ item.name }}</p>
+        </li>
+      </ul>
+      <ul class="sandbox__list">
+        <li class="sandbox__item">
+          <p>{{ resultData }}</p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -108,6 +104,6 @@ const { data } = await useFetch(url, options);
 const currency = data.value.suggestions;
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import './sandbox.scss';
 </style>
