@@ -13,6 +13,7 @@
       <ul class="header__nav-list">
         <NuxtLink class="header__item a-font__s" :to="localePath('/portfolio')">{{ $t('navigation.portf') }}</NuxtLink>
         <NuxtLink class="header__item a-font__s" :to="localePath('/tools')">{{ $t('navigation.tools') }}</NuxtLink>
+        <NuxtLink class="header__item a-font__s" :to="localePath('/useful')">{{ $t('navigation.useful') }}</NuxtLink>
         <NuxtLink class="header__item a-font__s" :to="localePath('/sandbox')">{{ $t('navigation.sandbox') }}</NuxtLink>
         <NuxtLink class="header__item a-font__s" :to="localePath('/contacts')">{{
           $t('navigation.contacts')
@@ -50,6 +51,9 @@
           }}</NuxtLink>
           <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/tools')">{{
             $t('navigation.tools')
+          }}</NuxtLink>
+          <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/useful')">{{
+            $t('navigation.useful')
           }}</NuxtLink>
           <NuxtLink class="header__item-mob a-font__m-m" :to="localePath('/sandbox')">{{
             $t('navigation.sandbox')
