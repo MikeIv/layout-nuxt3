@@ -47,11 +47,10 @@
 
 <script setup>
 /*
-import JSON
+import
 */
 import AButton from '~/components/_ui/AButton/a_button.vue';
 import Alink from '~/components/_ui/ALink/a_link.vue';
-
 
 /*
 Data reactive i18n not working
@@ -62,7 +61,7 @@ const dataList = portf.value;
 /*
 Data from i18n working
  */
-const { tm } = useI18n()
+const { tm } = useI18n();
 const workList = tm('portfolio');
 
 /*
