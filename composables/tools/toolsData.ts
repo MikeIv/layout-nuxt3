@@ -29,7 +29,10 @@ export const toolsData = () => {
       icon: 'nuxt',
       name: 'Nuxt',
       plugIn: [],
-      links: [{ text: 'Fake API', href: 'https://fakestoreapi.com/' }],
+      links: [
+        { text: 'Fake API', href: 'https://fakestoreapi.com/' },
+        { text: 'Настройка ESLint', href: 'https://webinmind.ru/nuxtjs/moduli/nastrojka-eslint-ot-airbnb-i-nuxtjs' },
+      ],
       npm: [
         { text: 'prettier', href: 'https://www.npmjs.com/package/prettier' },
         { text: 'autoprefixer', href: 'https://www.npmjs.com/package/autoprefixer' },
