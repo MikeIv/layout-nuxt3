@@ -32,6 +32,10 @@ export const toolsData = () => {
       links: [
         { text: 'Fake API', href: 'https://fakestoreapi.com/' },
         { text: 'Настройка ESLint', href: 'https://webinmind.ru/nuxtjs/moduli/nastrojka-eslint-ot-airbnb-i-nuxtjs' },
+        {
+          text: 'Commitizen and husky',
+          href: 'https://rdevelab.ru/blog/no-category/post/git-commits-lint-with-commitlint-and-husky',
+        },
       ],
       npm: [
         { text: 'prettier', href: 'https://www.npmjs.com/package/prettier' },
