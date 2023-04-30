@@ -5,13 +5,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MainPage',
-};
-</script>
+<script setup></script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .layout {
   &-home {
     display: flex;

@@ -1,4 +1,23 @@
 .useful {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: rem(100) rem(12);
+
+  @media screen and (min-width: $tablet) {
+    max-width: rem(768);
+    padding: rem(100) rem(40);
+  }
+  @media screen and (min-width: $tabletMax) {
+    max-width: rem(832);
+  }
+  @media screen and (min-width: $desktopMin) {
+    max-width: rem(1080);
+  }
   &__title {
     margin: rem(70) 0 rem(10) 0;
     color: var(--a-mainAccent);
