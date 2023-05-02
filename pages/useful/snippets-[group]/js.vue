@@ -6,5 +6,5 @@ definePageMeta({
 </script>
 
 <template>
-  <Js />
+  <UsefulJs />
 </template>
