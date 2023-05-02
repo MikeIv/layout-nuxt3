@@ -6,11 +6,13 @@
       <ul class="useful__block-list">
         <li class="useful__block-item">
           <NuxtLink to="/useful/snippets-css/css" class="useful__block-link a-font__m">
+            <nuxt-icon name="css" filled />
             <span class="a-font__s">Сниппеты CSS и SASS</span>
           </NuxtLink>
         </li>
         <li class="useful__item">
           <NuxtLink to="/useful/snippets-js/js" class="useful__block-link a-font__m">
+            <nuxt-icon name="js" filled />
             <span class="a-font__s">Сниппеты JavaScript</span>
           </NuxtLink>
         </li>

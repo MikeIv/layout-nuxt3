@@ -52,18 +52,5 @@
       max-width: rem(1080);
     }
   }
-
-  .nuxt-icon {
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-    svg {
-      object-fit: cover;
-      width: auto;
-      height: 100%;
-      margin: 0;
-    }
-  }
 }
 </style>
