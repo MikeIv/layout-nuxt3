@@ -2,21 +2,16 @@
   <section class="useful layout__wrapper">
     <h1 class="useful__title a-font__h1 hidden">Полезное</h1>
     <div class="useful__block">
-      <h2>Снипеты</h2>
-      <ul class="useful__list">
-        <li class="useful__item">
-          <NuxtLink to="/useful/1" class="main__gallery-link">
-            <span class="a-font__s">Post 1</span>
+      <h2 class="useful__block-header a-font__h3">Сниппеты</h2>
+      <ul class="useful__block-list">
+        <li class="useful__block-item">
+          <NuxtLink to="/useful/snippets-css/css" class="useful__block-link a-font__m">
+            <span class="a-font__s">Сниппеты CSS и SASS</span>
           </NuxtLink>
         </li>
         <li class="useful__item">
-          <NuxtLink to="/useful/snippets-css/css" class="main__gallery-link">
-            <span class="a-font__s">Post 2</span>
-          </NuxtLink>
-        </li>
-        <li class="useful__item">
-          <NuxtLink to="/useful/snippets-js/js" class="main__gallery-link">
-            <span class="a-font__s">Post 2</span>
+          <NuxtLink to="/useful/snippets-js/js" class="useful__block-link a-font__m">
+            <span class="a-font__s">Сниппеты JavaScript</span>
           </NuxtLink>
         </li>
       </ul>
