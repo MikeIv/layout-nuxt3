@@ -1,10 +1,10 @@
 //Функции для работы с компонентнами
-@use 'sass:math';
+//@use 'sass:math';
 @import '../variables/resolutions';
 
-@function rem($px) {
-  @return math.div($px, 16) + rem;
-}
+//@function rem($px) {
+//  @return math.div($px, 16) + rem;
+//}
 
 // Брейк поинты mobile-first
 @mixin mobile {
