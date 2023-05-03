@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
   title: 'Статья',
-  layout: 'custom',
+  layout: 'useful',
 });
 </script>
 

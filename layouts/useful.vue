@@ -6,9 +6,9 @@
 
 <script setup></script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .layout {
-  &-custom {
+  &-useful {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,16 @@
     width: 100%;
     min-height: 100vh;
     padding-bottom: rem(80);
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: rem(1080);
+      margin: 0 auto;
+      padding: rem(80) 0;
+    }
   }
 }
 </style>

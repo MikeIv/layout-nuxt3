@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {resolve} from 'path';
+import { resolve } from 'path';
 
 export default defineNuxtConfig({
   app: {
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "~/assets/styles/tools/_mixins.scss";',
+          additionalData: '@import "~/assets/styles/tools";',
         },
       },
     },
@@ -39,8 +39,8 @@ export default defineNuxtConfig({
       // ... or scan modules nested one level deep with a specific name and file extension
       'composables/*/index.{ts,js,mjs,mts}',
       // ... or scan all modules within given directory
-      'composables/**'
-    ]
+      'composables/**',
+    ],
   },
 
   i18n: {
