@@ -1,0 +1,52 @@
+.js {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__btn-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    padding: rem(4) rem(16);
+    color: var(--a-white);
+    background-color: var(--a-bgAccent);
+  }
+
+  &__title {
+    margin: rem(30) 0 rem(20) 0;
+  }
+  &__subtitle {
+    margin: rem(20) 0 rem(10) 0;
+  }
+
+  &__section-code {
+    display: flex;
+    align-items: center;
+    color: var(--a-bgLight);
+    background-color: var(--a-bgDark);
+  }
+
+  &__section-pre {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: auto;
+    white-space: pre;
+  }
+
+  &__code {
+    & .accent {
+      color: var(--code-accent);
+    }
+    & .ident {
+      color: var(--code-ident);
+    }
+    & .var {
+      color: var(--code-var);
+    }
+    & .cnt {
+      color: var(--code-cnt);
+    }
+  }
+}
