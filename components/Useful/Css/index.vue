@@ -1,5 +1,8 @@
 <template>
   <section class="css layout-useful__wrapper">
+    <NuxtLink to="/useful" class="css__btn-back">
+      <span class="a-font__s">назад</span>
+    </NuxtLink>
     <h1 class="css__header hidden">Сниппеты CSS и SASS</h1>
     <h2 class="css__title a-font__h3">Sass</h2>
     <h2 class="css__subtitle a-font__h4">Rem Function</h2>
