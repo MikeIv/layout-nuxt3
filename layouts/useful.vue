@@ -24,7 +24,7 @@
       width: 100%;
       max-width: rem(1080);
       margin: 0 auto;
-      padding: rem(80) 0;
+      padding: rem(80) rem(12);
     }
   }
 }

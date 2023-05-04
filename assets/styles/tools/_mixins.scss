@@ -1,10 +1,4 @@
-//Функции для работы с компонентнами
-//@use 'sass:math';
 @import '../variables/resolutions';
-
-//@function rem($px) {
-//  @return math.div($px, 16) + rem;
-//}
 
 // Брейк поинты mobile-first
 @mixin mobile {
@@ -26,19 +20,5 @@
 @mixin desktop {
   @media (min-width: #{$tabletBigMax}) {
     @content;
-  }
-}
-
-@mixin dissolveInWhite {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 10px;
-    background: linear-gradient(90deg, transparent 0%, #fff 50%);
   }
 }
