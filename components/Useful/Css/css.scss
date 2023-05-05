@@ -21,6 +21,7 @@
   }
 
   &__section-code {
+    position: relative;
     display: flex;
     align-items: center;
     color: var(--a-bgLight);
@@ -44,6 +45,44 @@
     }
     & .var {
       color: var(--code-var);
+    }
+  }
+
+  &__btn {
+    &-copy {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      &:hover {
+        opacity: 0.5;
+        transition: all 0.5s ease;
+      }
+
+      &.a-button {
+        position: absolute;
+        top: rem(4);
+        right: rem(4);
+        width: rem(30);
+        height: rem(30);
+      }
+
+      .nuxt-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(24);
+        height: rem(24);
+
+        svg {
+          object-fit: cover;
+          width: auto;
+          height: 100%;
+        }
+      }
     }
   }
 }
