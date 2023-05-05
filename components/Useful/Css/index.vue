@@ -7,6 +7,10 @@
     <h2 class="css__title a-font__h3">Sass</h2>
     <h2 class="css__subtitle a-font__h4">Rem Function</h2>
     <div class="css__section-code">
+      <AButton @handleClick="copy(remFunc)" class="css__btn-copy" onlyIcon="square" bgColor="ghost" size="small">
+        <nuxt-icon v-if="!copied" name="copy" filled />
+        <nuxt-icon v-else name="check-box" filled />
+      </AButton>
       <pre class="css__section-pre" aria-label="Шаблон кода">
         <code class="css__code">
    @use <span class="accent">'sass:math'</span>;
@@ -22,7 +26,12 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import AButton from '~/components/_ui/AButton/a_button.vue';
+
+const { remFunc } = snippetCssData();
+const { text, copy, copied, isSupported } = useClipboard();
+</script>
 
 <style lang="scss">
 @import './css.scss';

@@ -14,7 +14,7 @@ props
 const props = defineProps({
   bgColor: {
     type: String,
-    validator: (value) => ['accent', 'primary', 'secondary', 'ghost-accept'].includes(value),
+    validator: (value) => ['accent', 'primary', 'secondary', 'ghost', 'ghost-accept'].includes(value),
   },
   label: {
     type: String,
