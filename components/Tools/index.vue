@@ -17,7 +17,7 @@
           </div>
           <div class="tools__header-link-group">
             <a :href="`${item.href}`" class="tools__header-sourse a-font__s" target="_blank">{{ item.title }}</a>
-            <a :href="`#${item.id}`" class="tools__header-link a-font__s">#</a>
+            <a :href="`#${item.id}`" class="tools__header-link a-font__s" title="nav">#</a>
           </div>
         </li>
       </ul>
