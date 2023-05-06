@@ -11,7 +11,7 @@
   }
 }
 
-@mixin tabletBig {
+@mixin tabletMax {
   @media (min-width: #{$tabletMax}) {
     @content;
   }
