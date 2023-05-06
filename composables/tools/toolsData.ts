@@ -22,6 +22,10 @@ export const toolsData = () => {
           text: 'Хуки Composition API',
           href: 'https://v3.ru.vuejs.org/ru/api/composition-api.html#хуки-жизненного-цикла',
         },
+        {
+          text: 'VueUse',
+          href: 'https://vueuse.org/functions.html',
+        },
       ],
     },
     {
