@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   alias: {
     '@': resolve(__dirname, '/'),
-    // assets: '/<rootDir>/assets',
+    // 'assets': '/<rootDir>/assets',
   },
   css: ['~/assets/styles/main.scss'],
   vite: {

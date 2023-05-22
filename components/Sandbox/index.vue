@@ -46,11 +46,22 @@
         </li>
       </ul>
     </div>
+    <div class="sandbox__section">
+      <h3 class="sandbox__label a-font__h3">Слайдер</h3>
+      <swiper-container class="sandbox__swiper">
+        <swiper-slide class="sandbox__swiper-item">Slide 1</swiper-slide>
+        <swiper-slide class="sandbox__swiper-item">Slide 2</swiper-slide>
+        <swiper-slide class="sandbox__swiper-item">Slide 3</swiper-slide>
+      </swiper-container>
+    </div>
   </section>
 </template>
 
 <script setup>
 import { checkResult } from '../../composables/sandbox/checkResult';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');

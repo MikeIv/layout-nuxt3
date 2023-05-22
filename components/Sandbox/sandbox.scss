@@ -80,4 +80,10 @@
     padding: rem(10) rem(20);
     background-color: var(--a-mainBg);
   }
+
+  &__swiper {
+    min-height: rem(390);
+    margin-top: rem(30);
+    background-color: var(--a-bgAccentLight);
+  }
 }
