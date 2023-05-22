@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "nuxt-icons": "^3.2.1",
-    "pinia": "^2.0.33"
+    "pinia": "^2.0.33",
+    "swiper": "^9.3.2"
   },
   "overrides": {
     "vue": "latest"

@@ -18,6 +18,17 @@
         </li>
       </ul>
     </div>
+    <div class="useful__block">
+      <h2 class="useful__block-header a-font__h3">Разное</h2>
+      <ul class="useful__block-list">
+        <li class="useful__block-item">
+          <NuxtLink to="/useful/snippets-css/css" class="useful__block-link a-font__m">
+            <img class="useful__block-item-logo" src="~/assets/images/logo-cmder-light.jpg" alt="logo" />
+            <span class="a-font__s">Консольные команды</span>
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
