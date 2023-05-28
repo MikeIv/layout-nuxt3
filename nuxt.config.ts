@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from 'path';
+// import { resolve } from 'path';
+import { fileURLToPath, URL } from 'url';
 
 export default defineNuxtConfig({
   app: {
@@ -10,7 +11,9 @@ export default defineNuxtConfig({
     },
   },
   alias: {
-    '@': resolve(__dirname, '/'),
+    '@': fileURLToPath(new URL('./', import.meta.url)),
+    'images': fileURLToPath(new URL('./assets/images', import.meta.url)),
+    'style': fileURLToPath(new URL('./assets/styles', import.meta.url)),
     // 'assets': '/<rootDir>/assets',
   },
   css: ['~/assets/styles/main.scss'],
@@ -56,5 +59,11 @@ export default defineNuxtConfig({
       locale: 'ru',
       messages: {},
     },
+  },
+
+  pinia: {
+    autoImports: [
+      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
   },
 });
