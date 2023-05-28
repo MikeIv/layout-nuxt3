@@ -4,16 +4,23 @@
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 
     <div class="sandbox__section">
-      <h3 class="sandbox__label a-font__h3">{{ counterData.title }}:</h3>
-      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter(1)">-</button>
-      <p class="sandbox__counter a-font__h3">{{ counterData.count }}</p>
-      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter(1)">+</button>
+      <h3 class="sandbox__label a-font__h3">{{ storeCounter.title }}:</h3>
+      <button class="sandbox__btn-count a-font__h2" @click="storeCounter.decreaseCount">-</button>
+      <p class="sandbox__counter a-font__h3">{{ storeCounter.count }}</p>
+      <button class="sandbox__btn-count a-font__h2" @click="storeCounter.increaseCount">+</button>
+      <p class="sandbox__counter sandbox__text a-font__l">{{ storeCounter.subtitle }}: {{ storeCounter.oddOrEven }}</p>
     </div>
 
     <div class="sandbox__section">
-      <h3 class="sandbox__label a-font__h4">Редактирование заголовка</h3>
       <div class="sandbox__block">
+        <h3 class="sandbox__label a-font__h4">Заголовок: {{ counterData.title }}</h3>
         <input class="sandbox__input" type="text" v-model="counterData.title" v-focus />
+      </div>
+      <div class="sandbox__block">
+        <h3 class="sandbox__label a-font__h4">Информация</h3>
+        <input class="sandbox__input" type="text" v-model="nameFirst" v-focus />
+        <input class="sandbox__input" type="text" v-model="age" v-focus />
+        <p class="sandbox__counter sandbox__text a-font__l">{{ nameFirst }} – {{ age }}</p>
       </div>
     </div>
 
@@ -58,8 +65,9 @@
 </template>
 
 <script setup>
-import { checkResult } from '../../composables/sandbox/checkResult';
+import { checkResult } from '@/composables/sandbox/checkResult';
 import { register } from 'swiper/element/bundle';
+import { useCounterStore } from '@/stores/counter';
 
 register();
 
@@ -69,7 +77,9 @@ $sayWord('это проверка работы функции');
 /*
 Counter
  */
-const counter = ref(0);
+
+// Данные из Stores
+const storeCounter = useCounterStore();
 
 const increaseCounter = (amount) => {
   counterData.count += amount;
@@ -78,10 +88,22 @@ const decreaseCounter = (amount) => {
   counterData.count -= amount;
 };
 
+// Использование без Stores
+const counter = ref(0);
 const counterData = reactive({
   count: 0,
   title: 'Счетчик',
+  subtitle: 'Четность',
 });
+
+const oddOrEven = computed(() => {
+  if (counterData.count % 2 === 0) return 'четное';
+  return 'нечетное';
+});
+
+/*
+Test function
+ */
 
 const { numArr } = useTestFunc();
 const dataTest = numArr.value;
@@ -89,9 +111,7 @@ const dataTest = numArr.value;
 const filterdata = dataTest.splice(1, 0, 'one', 'two', '12345');
 const transformdata = dataTest.reverse();
 
-const { resultData } = checkResult();
-
-console.log('resultData: ' + resultData());
+const { nameFirst, age } = checkResult();
 
 /*
 Get Data from reactive

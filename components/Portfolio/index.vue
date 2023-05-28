@@ -27,11 +27,11 @@
         <div class="portfolio__img-wrapper">
           <img
             v-if="toggleView(index) && item.imgMob"
-            :src="`/images/portfolio/${item.imgMob}`"
+            :src="`images/portfolio/${item.imgMob}`"
             alt="image"
             class="portfolio__img"
           />
-          <img v-else :src="`/images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
+          <img v-else :src="`images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
         </div>
         <article class="portfolio__description" v-if="toggleDescription(index)">
           <div class="portfolio__description-head">
