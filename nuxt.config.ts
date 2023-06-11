@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Portfolio',
-      meta: [{ name: 'description', content: 'Мой сайт' }],
+      meta: [{ name: 'description', content: 'Сайт портфолио и полезные ресурсы' }],
       link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
     },
   },
