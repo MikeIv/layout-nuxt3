@@ -133,6 +133,13 @@ const options = {
 
 const { data } = await useFetch(url, options);
 const currency = data.value.suggestions;
+
+/*
+Get global window
+ */
+if (process.client) {
+  console.log('window:');
+}
 </script>
 
 <style lang="scss">
