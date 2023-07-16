@@ -27,7 +27,7 @@
         <div class="portfolio__img-wrapper">
           <img
             v-if="toggleView(index) && item.imgMob"
-            :src="`images/portfolio/${item.imgMob}`"
+            :src="`${$t('/images/portfolio/')}${item.imgMob}`"
             alt="image"
             class="portfolio__img"
           />

@@ -2,7 +2,6 @@
 definePageMeta({
   title: 'Главная страница',
   layout: 'home',
-  alias: 'home',
 });
 </script>
 
