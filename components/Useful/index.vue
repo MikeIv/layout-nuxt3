@@ -27,6 +27,12 @@
             <span class="a-font__s">Консольные команды</span>
           </NuxtLink>
         </li>
+        <li class="useful__block-item">
+          <NuxtLink to="/useful/different/hint" class="useful__block-link a-font__m">
+            <nuxt-icon name="js" filled />
+            <span class="a-font__s">Шпаргалка</span>
+          </NuxtLink>
+        </li>
       </ul>
     </div>
     <div class="useful__block">

@@ -8,6 +8,8 @@ export const useResponsive = () => {
     window.addEventListener('resize', updateWidth);
   });
 
+  // Добавить debunce
+
   const updateWidth = () => {
     isMobile.value = window.innerWidth < 768;
 

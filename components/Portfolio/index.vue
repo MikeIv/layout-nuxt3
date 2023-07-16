@@ -31,7 +31,7 @@
             alt="image"
             class="portfolio__img"
           />
-          <img v-else :src="`images/portfolio/${item.img}`" alt="image" class="portfolio__img" />
+          <img v-else :src="`${$t('/images/portfolio/')}${item.img}`" alt="image" class="portfolio__img" />
         </div>
         <article class="portfolio__description" v-if="toggleDescription(index)">
           <div class="portfolio__description-head">
@@ -63,6 +63,7 @@ Data from i18n working
  */
 const { tm } = useI18n();
 const workList = tm('portfolio');
+console.log('workList', workList);
 
 /*
 mobileVersion
