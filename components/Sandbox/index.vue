@@ -138,7 +138,8 @@ const currency = data.value.suggestions;
 Get global window
  */
 if (process.client) {
-  console.log('window:');
+  console.log('window:', window);
+  console.log('global:', globalThis);
 }
 </script>
 
