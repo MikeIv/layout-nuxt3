@@ -21,6 +21,13 @@
   "portfolio":
   [
     {
+      "name": "Avtodom",
+      "img": "016.jpg",
+      "imgMob": "016-mob.jpg",
+      "description": "Commercial project. Teamwork. Development of components. Creating methods. Connecting the API",
+      "link": "https://avtodom.ru/"
+    },
+    {
       "name": "SynergyHUB",
       "img": "011.jpg",
       "imgMob": "011-mob.jpg",
