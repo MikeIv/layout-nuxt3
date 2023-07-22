@@ -1,12 +1,9 @@
 .js {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @include flex-column;
 
   &__btn-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   @include flex;
+
     margin-right: auto;
     padding: rem(4) rem(16);
     color: var(--a-white);

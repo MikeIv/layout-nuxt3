@@ -3,6 +3,18 @@
     <h1 class="sandbox__title a-font__h1 hidden">Vue 3 Nuxt 3</h1>
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 
+    <div class="sandbox__section sandbox__section-pages-links">
+      <h3 class="sandbox__links-title a-font__h3">Компоненты</h3>
+      <ul class="sandbox__pages-links">
+        <li class="sandbox__pages-links-item">
+          <NuxtLink to="/sandbox/samples/drag-cards" class="sandbox__block-link a-font__m">
+            <span class="a-font__s">Drag&DropCards</span>
+          </NuxtLink>
+        </li>
+      </ul>
+
+    </div>
+
     <div class="sandbox__section">
       <h3 class="sandbox__label a-font__h3">{{ storeCounter.title }}:</h3>
       <button class="sandbox__btn-count a-font__h2" @click="storeCounter.decreaseCount">-</button>
@@ -65,9 +77,9 @@
 </template>
 
 <script setup>
-import { checkResult } from '@/composables/sandbox/checkResult';
-import { register } from 'swiper/element/bundle';
-import { useCounterStore } from '@/stores/counter';
+import {checkResult} from '@/composables/sandbox/checkResult';
+import {register} from 'swiper/element/bundle';
+import {useCounterStore} from '@/stores/counter';
 
 register();
 
