@@ -24,6 +24,7 @@
     </div>
 
     <div class="sandbox__section">
+      <pre>{{ testData }} --- !</pre>
       <div class="sandbox__block">
         <h3 class="sandbox__label a-font__h4">Заголовок: {{ counterData.title }}</h3>
         <input class="sandbox__input" type="text" v-model="counterData.title" v-focus />
@@ -54,6 +55,10 @@
         </li>
       </ul>
 
+      <br>
+
+      <br>
+
       <ul class="sandbox__list">
         <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
           <p>{{ item.name }}</p>
@@ -80,6 +85,7 @@
 import {checkResult} from '@/composables/sandbox/checkResult';
 import {register} from 'swiper/element/bundle';
 import {useCounterStore} from '@/stores/counter';
+import {useFetch} from "nuxt/app";
 
 register();
 
@@ -125,6 +131,14 @@ const transformdata = dataTest.reverse();
 
 const { nameFirst, age } = checkResult();
 
+const testData = ref();
+
+const { data: otherData } = await useFetch('/api/testApi')
+console.log('DATA: ', otherData)
+testData.value = otherData
+
+
+
 /*
 Get Data from reactive
  */
@@ -143,8 +157,8 @@ const options = {
   body: JSON.stringify({ query: query }),
 };
 
-const { data } = await useFetch(url, options);
-const currency = data.value.suggestions;
+const { data: dataBank } = await useFetch(url, options);
+const currency = dataBank.value.suggestions;
 
 /*
 Get global window
