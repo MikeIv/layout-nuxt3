@@ -12,7 +12,6 @@
           </NuxtLink>
         </li>
       </ul>
-
     </div>
 
     <div class="sandbox__section">
@@ -50,7 +49,7 @@
 
       <br />
       <ul class="sandbox__list">
-        <li class="sandbox__item" v-for="item in currency" :key="item.index">
+        <li class="sandbox__item" v-for="item in reactApiData" :key="item.index">
           <p>{{ item.value }}</p>
         </li>
       </ul>
@@ -86,6 +85,7 @@ import {checkResult} from '@/composables/sandbox/checkResult';
 import {register} from 'swiper/element/bundle';
 import {useCounterStore} from '@/stores/counter';
 import {useFetch} from "nuxt/app";
+import {dataBank} from "../../server/api/dataBank";
 
 register();
 
@@ -142,6 +142,11 @@ testData.value = otherData
 /*
 Get Data from reactive
  */
+const apiData = ref(null)
+
+const reactApiData = reactive(apiData)
+console.log('reactApiData: ', reactApiData)
+
 const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
 const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
 const query = 'сбербанк';
@@ -157,8 +162,13 @@ const options = {
   body: JSON.stringify({ query: query }),
 };
 
-const { data: dataBank } = await useFetch(url, options);
-const currency = dataBank.value.suggestions;
+dataBank(url, options).then((value) => {
+  console.log('VALUE@: ', value)
+  apiData.value = value.suggestions
+})
+    .catch(error => {
+      error.message
+    })
 
 /*
 Get global window

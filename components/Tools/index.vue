@@ -63,7 +63,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
 const { toolsTitle } = toolsTitleList();
