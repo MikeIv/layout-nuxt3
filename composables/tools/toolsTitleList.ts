@@ -17,6 +17,13 @@ export const toolsTitleList = () => {
       title: 'Js Doc',
     },
     {
+      id: 'ts',
+      cell: 'item-07',
+      icon: 'ts',
+      href: 'https://typescript-handbook.ru/',
+      title: 'TypeScript',
+    },
+    {
       id: 'vue',
       cell: 'item-03',
       icon: 'vue',
@@ -50,13 +57,6 @@ export const toolsTitleList = () => {
       icon: 'webstorm',
       href: 'https://www.jetbrains.com/webstorm/',
       title: 'WebStorm',
-    },
-    {
-      id: 'ts',
-      cell: 'item-07',
-      icon: 'ts',
-      href: 'https://typescript-handbook.ru/',
-      title: 'TypeScript',
     },
   ];
 

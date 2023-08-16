@@ -2,7 +2,7 @@
   <section class="tools layout__wrapper">
     <h1 class="tools__title a-font__h1 hidden">Инструменты</h1>
     <div class="tools__header">
-      <li class="tools__header-title">{{ $t('tools.technologies') }}</li>
+      <li class="tools__header-title a-font__s">{{ $t('tools.technologies') }}</li>
       <ul class="tools__header-list">
         <li
           class="tools__header-item"
