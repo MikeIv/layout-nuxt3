@@ -7,7 +7,7 @@
         <li
           class="tools__header-item"
           :class="item.cell"
-          v-for="(item, index) in titleList"
+          v-for="(item, index) in titleData"
           :key="index"
           v-if="titleList"
         >
@@ -66,9 +66,12 @@
 <script setup lang="ts">
 import Alink from '~/components/_ui/ALink/a_link.vue';
 
+const titleList = ref<Array<typeToolsTitle>>()
+const titleData = reactive(titleList)
+
 const { toolsTitle } = toolsTitleList();
-const titleList = toolsTitle.value;
-console.log('toolsTitle', toolsTitle);
+titleList.value = toolsTitle;
+console.log('titleData', titleData);
 
 const { toolsDescription } = toolsData();
 const toolsContent = toolsDescription.value;

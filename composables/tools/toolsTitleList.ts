@@ -1,5 +1,14 @@
 export const toolsTitleList = () => {
-  const toolsTitle = ref([
+
+  type Tools = {
+    id: string;
+    cell: string;
+    icon: string;
+    href: string;
+    title: string;
+  };
+
+  const toolsTitle: Tools[] = [
     {
       id: 'js',
       cell: 'item-02',
@@ -42,7 +51,14 @@ export const toolsTitleList = () => {
       href: 'https://www.jetbrains.com/webstorm/',
       title: 'WebStorm',
     },
-  ]);
+    {
+      id: 'ts',
+      cell: 'item-07',
+      icon: 'ts',
+      href: 'https://typescript-handbook.ru/',
+      title: 'TypeScript',
+    },
+  ];
 
   return {
     toolsTitle,

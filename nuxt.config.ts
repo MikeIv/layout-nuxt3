@@ -46,6 +46,18 @@ export default defineNuxtConfig({
     ],
   },
 
+  types: {
+    files: [
+      {
+        expand: true,
+        cwd: 'types',
+        src: ['**'],
+        dest: 'types/'
+      }
+    ]
+  },
+
+
   i18n: {
     locales: [
       { code: 'ru', name: 'Ru', file: 'ru.json' },
