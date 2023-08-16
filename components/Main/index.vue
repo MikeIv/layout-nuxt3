@@ -18,7 +18,7 @@
 
     <MainNav />
 
-    <p class="main__attention a-font__s">{{ $t('info.develop') }} <span>(v0.1.7)</span></p>
+    <p class="main__attention a-font__s">{{ $t('info.develop') }} <span>(v0.1.8)</span></p>
   </section>
 </template>
 
