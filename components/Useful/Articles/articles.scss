@@ -103,9 +103,9 @@
     &-link {
       margin-bottom: rem(10);
       font-weight: bold;
-      color: var(--a-accentText);
+      color: var(--code-var);
       &:hover {
-        color: var(--a-mainText);
+        color: var(--a-accentText);
       }
     }
   }

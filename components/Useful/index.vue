@@ -39,9 +39,9 @@
       <h2 class="useful__block-header a-font__h3">Статьи</h2>
       <ul class="useful__block-list">
         <li class="useful__block-item">
-          <NuxtLink to="/useful/articles/nuxt" class="useful__block-link a-font__m">
+          <NuxtLink to="/useful/articles/vue-nuxt" class="useful__block-link a-font__m">
             <nuxt-icon name="articlesLtr" filled />
-            <span class="a-font__s">API in Nuxt</span>
+            <span class="a-font__s">Vue 3 & Nuxt</span>
           </NuxtLink>
         </li>
         <li class="useful__block-item">

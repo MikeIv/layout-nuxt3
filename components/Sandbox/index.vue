@@ -23,6 +23,14 @@
     </div>
 
     <div class="sandbox__section">
+      <h3 class="sandbox__label a-font__h3">{{ storeCounter.title }}:</h3>
+      <button class="sandbox__btn-count a-font__h2" @click="decreaseCounter">-</button>
+      <p class="sandbox__counter a-font__h3">{{ counter }}</p>
+      <button class="sandbox__btn-count a-font__h2" @click="increaseCounter">+</button>
+      <p class="sandbox__counter sandbox__text a-font__l">{{ storeCounter.subtitle }}: {{ storeCounter.oddOrEven }}</p>
+    </div>
+
+    <div class="sandbox__section">
       <pre>{{ testData }} --- !</pre>
       <div class="sandbox__block">
         <h3 class="sandbox__label a-font__h4">Заголовок: {{ counterData.title }}</h3>
@@ -65,18 +73,18 @@
       </ul>
       <ul class="sandbox__list">
         <li class="sandbox__item">
-          <p>{{ resultData }}</p>
+          <p>{{  }}</p>
         </li>
       </ul>
     </div>
-    <div class="sandbox__section">
-      <h3 class="sandbox__label a-font__h3">Слайдер</h3>
-      <swiper-container class="sandbox__swiper">
-        <swiper-slide class="sandbox__swiper-item">Slide 1</swiper-slide>
-        <swiper-slide class="sandbox__swiper-item">Slide 2</swiper-slide>
-        <swiper-slide class="sandbox__swiper-item">Slide 3</swiper-slide>
-      </swiper-container>
-    </div>
+<!--    <div class="sandbox__section">-->
+<!--      <h3 class="sandbox__label a-font__h3">Слайдер</h3>-->
+<!--      <swiper-container class="sandbox__swiper">-->
+<!--        <swiper-slide class="sandbox__swiper-item">Slide 1</swiper-slide>-->
+<!--        <swiper-slide class="sandbox__swiper-item">Slide 2</swiper-slide>-->
+<!--        <swiper-slide class="sandbox__swiper-item">Slide 3</swiper-slide>-->
+<!--      </swiper-container>-->
+<!--    </div>-->
   </section>
 </template>
 
@@ -99,11 +107,11 @@ Counter
 // Данные из Stores
 const storeCounter = useCounterStore();
 
-const increaseCounter = (amount) => {
-  counterData.count += amount;
+const increaseCounter = () => {
+  counter.value ++;
 };
-const decreaseCounter = (amount) => {
-  counterData.count -= amount;
+const decreaseCounter = () => {
+  counter.value --;
 };
 
 // Использование без Stores
@@ -114,10 +122,23 @@ const counterData = reactive({
   subtitle: 'Четность',
 });
 
+// Computed counter
 const oddOrEven = computed(() => {
   if (counterData.count % 2 === 0) return 'четное';
   return 'нечетное';
 });
+
+
+
+// Watch counter
+watchEffect(() => {
+  console.log('newCount: ' + counter.value)
+  if (counter.value === 12) {
+    console.log('Предельное значение')
+    alert('Предельное значение')
+  }
+})
+
 
 /*
 Test function
