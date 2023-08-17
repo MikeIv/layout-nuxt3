@@ -119,6 +119,7 @@
 
   &__item {
     margin: 0 rem(10);
+    color: var(--a-mainText);
     text-transform: uppercase;
     user-select: none;
 
@@ -172,4 +173,14 @@
     text-transform: uppercase;
     background-color: var(--a-bgLight);
   }
+
+  &__mode {
+    color: var(--a-mainText);
+    &:hover {
+      color: var(--a-accentText);
+    }
+  }
 }
+
+
+

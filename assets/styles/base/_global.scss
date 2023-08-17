@@ -3,4 +3,15 @@
 html,
 body {
   font-size: $base-font-size;
+  background-color: var(--a-white);
+  color: var(--a-mainText);
+}
+
+.dark-mode body {
+  background-color: var(--a-bgDark);
+
+}
+.sepia-mode body {
+  background-color: var(--a-bgSepia);
+  color: var(--a-mainText);
 }
