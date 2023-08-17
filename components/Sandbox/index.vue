@@ -85,8 +85,6 @@ const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
 
 
-
-
 /*
 Test function
  */

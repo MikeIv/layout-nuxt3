@@ -20,8 +20,14 @@
         }}</NuxtLink>
       </ul>
     </nav>
-
+    <Abutton @click="darkMode" onlyIcon="square" bgColor="ghost"><nuxt-icon name="articlesLtr" filled /></Abutton>
     <div class="header__block">
+<!--      <select v-model="$colorMode.preference">-->
+<!--        <option value="system">System</option>-->
+<!--        <option value="light">Light</option>-->
+<!--        <option value="dark">Dark</option>-->
+<!--        <option value="sepia">Sepia</option>-->
+<!--      </select>-->
       <a href="https://github.com/MikeIv" class="header__link" target="_blank">
         <nuxt-icon name="github" class="icon-logo" />
       </a>
@@ -68,8 +74,16 @@
 </template>
 
 <script setup>
+import Abutton from '~/components/_ui/AButton/a_button.vue';
+
 const localePath = useLocalePath();
 const { routeLinks } = useRouteLinks();
+
+// Color mode
+const colorMode = useColorMode()
+const darkMode = () => {
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark';
+}
 
 const { isMobile, isTabled, isDesktop } = useResponsive();
 
