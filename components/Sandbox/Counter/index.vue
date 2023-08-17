@@ -96,6 +96,11 @@ watch(() => counterData.count, (newCount) => {
   }
 })
 
+// Autofocus
+const vFocus = {
+  mounted: (el) => el.focus()
+}
+
 </script>
 
 <style lang="scss">
