@@ -20,7 +20,11 @@
         }}</NuxtLink>
       </ul>
     </nav>
-    <Abutton @click="darkMode" onlyIcon="square" bgColor="ghost"><nuxt-icon name="articlesLtr" filled /></Abutton>
+    <Abutton class="header__mode" @click="darkMode" onlyIcon="square"
+             bgColor="ghost">
+      <nuxt-icon v-if="colorMode.preference === 'light'" name="lightMode" filled />
+      <nuxt-icon v-if="colorMode.preference === 'dark'" name="darkMode" filled />
+    </Abutton>
     <div class="header__block">
 <!--      <select v-model="$colorMode.preference">-->
 <!--        <option value="system">System</option>-->
@@ -29,7 +33,7 @@
 <!--        <option value="sepia">Sepia</option>-->
 <!--      </select>-->
       <a href="https://github.com/MikeIv" class="header__link" target="_blank">
-        <nuxt-icon name="github" class="icon-logo" />
+        <nuxt-icon name="github" class="header__mode" />
       </a>
 
       <NuxtLink

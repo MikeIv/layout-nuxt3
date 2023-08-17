@@ -198,7 +198,6 @@
   &--ghost {
     box-sizing: border-box;
     color: var(--a-lightText);
-    border: rem(1) solid var(--a-borderMain);
     background-color: transparent;
     &.hover,
     &:hover {

@@ -173,4 +173,14 @@
     text-transform: uppercase;
     background-color: var(--a-bgLight);
   }
+
+  &__mode {
+    color: var(--a-mainText);
+    &:hover {
+      color: var(--a-accentText);
+    }
+  }
 }
+
+
+
