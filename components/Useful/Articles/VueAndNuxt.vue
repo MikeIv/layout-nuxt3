@@ -20,12 +20,19 @@
     <div class="articles__info">
       <h4 class="articles__info-text a-font__h4">watch and watchEffect</h4>
       <blockquote class="articles__info-quote">Composition API предоставляет нам два разных метода для обработки побочных эффектов - watch и watchEffect.</blockquote>
-      <a
-        class="articles__info-link a-font__m"
-        href="https://habr.com/ru/companies/simbirsoft/articles/697910/"
-        target="_blank"
-        >подробнее</a
-      >
+      <div class="articles__info-list-link">
+        <a
+          class="articles__info-link a-font__m"
+          href="https://habr.com/ru/companies/simbirsoft/articles/697910/"
+          target="_blank"
+      >подробнее</a
+      > <a
+          class="articles__info-link a-font__m"
+          href="https://www.thisdot.co/blog/vue-3-composition-api-watch-and-watcheffect/"
+          target="_blank"
+      >подробнее</a>
+      </div>
+
     </div>
   </section>
 </template>

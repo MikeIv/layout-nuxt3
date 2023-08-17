@@ -100,8 +100,12 @@
       color: var(--a-mainText);
     }
 
+    &-list-link {
+     display: flex;
+    }
+
     &-link {
-      margin-bottom: rem(10);
+      margin: 0 rem(14) rem(10) rem(14);
       font-weight: bold;
       color: var(--code-var);
       &:hover {

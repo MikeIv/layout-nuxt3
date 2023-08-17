@@ -78,6 +78,11 @@
 
   &__text {
     margin-left: rem(20);
+
+    span {
+      margin-left: rem(40);
+      color: var(--a-accentText);
+    }
   }
 
   &__block {
