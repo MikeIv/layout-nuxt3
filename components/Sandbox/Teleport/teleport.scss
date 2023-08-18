@@ -2,6 +2,10 @@
 @include flex-column;
 
   position: relative;
+  
+  &__button {
+    margin: 0 auto;
+  }
 
   &__modal {
     @include flex-column;

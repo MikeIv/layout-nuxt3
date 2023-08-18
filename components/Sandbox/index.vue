@@ -82,7 +82,6 @@ $sayWord('это проверка работы функции');
 
 // Components Title
 const {listItems} =typeComponentsTitle()
-console.log('listItems: ', listItems)
 
 
 /*
@@ -100,7 +99,6 @@ const { nameFirst, age } = checkResult();
 const testData = ref();
 
 const { data: otherData } = await useFetch('/api/testApi')
-console.log('DATA: ', otherData)
 testData.value = otherData
 
 
@@ -111,7 +109,6 @@ Get Data from reactive
 const apiData = ref(null)
 
 const reactApiData = reactive(apiData)
-console.log('reactApiData: ', reactApiData)
 
 const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
 const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
@@ -129,7 +126,6 @@ const options = {
 };
 
 dataBank(url, options).then((value) => {
-  console.log('VALUE@: ', value)
   apiData.value = value.suggestions
 })
     .catch(error => {
