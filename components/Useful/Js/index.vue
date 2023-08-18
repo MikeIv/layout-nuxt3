@@ -1,8 +1,6 @@
 <template>
   <section class="js layout-useful__wrapper">
-    <NuxtLink to="/useful" class="css__btn-back">
-      <span class="a-font__s">назад</span>
-    </NuxtLink>
+    <CommonButtonBack link="/useful" />
     <h1 class="js__header hidden">Сниппеты JS</h1>
     <h2 class="js__title a-font__h3">Число</h2>
     <h2 class="js__subtitle a-font__h4">Среднее значение</h2>
@@ -35,5 +33,5 @@ const { text, copy, copied } = useClipboard();
 </script>
 
 <style lang="scss">
-@import './js.scss';
+@import 'js.scss';
 </style>

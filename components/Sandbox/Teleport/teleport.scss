@@ -1,0 +1,15 @@
+.teleport {
+@include flex-column;
+
+  position: relative;
+  
+  &__button {
+    margin: 0 auto;
+  }
+
+  &__content-modal {
+    margin-bottom: rem(30);
+  }
+
+
+}

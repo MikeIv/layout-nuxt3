@@ -1,8 +1,6 @@
 <template>
   <section class="hint layout-useful__wrapper">
-    <NuxtLink to="/useful" class="hint__btn-back">
-      <span class="a-font__s">назад</span>
-    </NuxtLink>
+    <CommonButtonBack link="/useful" />
     <h1 class="hint__header hidden">База знаний</h1>
     <h2 class="hint__title a-font__h3">База знаний</h2>
     <h3 class="hint__subtitle a-font__h4">Создание копии объекта</h3>

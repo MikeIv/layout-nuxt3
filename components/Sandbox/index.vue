@@ -6,14 +6,9 @@
     <div class="sandbox__section sandbox__section-pages-links">
       <h3 class="sandbox__links-title a-font__h3">Компоненты</h3>
       <ul class="sandbox__pages-links">
-        <li class="sandbox__pages-links-item">
-          <NuxtLink to="/sandbox/samples/drag-cards" class="sandbox__block-link a-font__m">
-            <span class="a-font__s">Drag&DropCards</span>
-          </NuxtLink>
-        </li>
-        <li class="sandbox__pages-links-item">
-          <NuxtLink to="/sandbox/samples/counter" class="sandbox__block-link a-font__m">
-            <span class="a-font__s">Counter</span>
+        <li class="sandbox__pages-links-item" v-for="item in listItems" :key="item.id">
+          <NuxtLink :to="item.path" class="sandbox__block-link a-font__m">
+            <span class="a-font__s">{{ item.name }}</span>
           </NuxtLink>
         </li>
       </ul>
@@ -24,7 +19,7 @@
       <div class="sandbox__block">
         <h3 class="sandbox__label a-font__h4">Информация</h3>
         <input class="sandbox__input" type="text" v-model="nameFirst" v-focus />
-        <input class="sandbox__input" type="text" v-model="age" v-focus />
+        <input class="sandbox__input" type="text" v-model="age"  />
         <p class="sandbox__counter sandbox__text a-font__l">{{ nameFirst }} – {{ age }}</p>
       </div>
     </div>
@@ -78,11 +73,15 @@ import {checkResult} from '@/composables/sandbox/checkResult';
 import {register} from 'swiper/element/bundle';
 import {useFetch} from "nuxt/app";
 import {dataBank} from "../../server/api/dataBank";
+import {typeComponentsTitle} from "../../composables/sandbox/typeComponentsTitle";
 
 register();
 
 const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
+
+// Components Title
+const {listItems} =typeComponentsTitle()
 
 
 /*
@@ -100,7 +99,6 @@ const { nameFirst, age } = checkResult();
 const testData = ref();
 
 const { data: otherData } = await useFetch('/api/testApi')
-console.log('DATA: ', otherData)
 testData.value = otherData
 
 
@@ -111,7 +109,6 @@ Get Data from reactive
 const apiData = ref(null)
 
 const reactApiData = reactive(apiData)
-console.log('reactApiData: ', reactApiData)
 
 const url = 'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party';
 const token = '0845425a22e3e674a4ef51f59dca016bc1c775b5';
@@ -129,7 +126,6 @@ const options = {
 };
 
 dataBank(url, options).then((value) => {
-  console.log('VALUE@: ', value)
   apiData.value = value.suggestions
 })
     .catch(error => {
