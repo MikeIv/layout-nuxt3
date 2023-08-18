@@ -1,3 +1,27 @@
 .teleport {
+@include flex-column;
 
+  position: relative;
+
+  &__modal {
+    @include flex-column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: rem(30);
+    background-color: var(--a-bgSepia);
+    z-index: 1;
+
+    &-header {
+      margin: 0 auto;
+      margin-bottom: rem(20);
+    }
+    &-content {
+      margin-bottom: rem(30);
+    }
+  }
 }
