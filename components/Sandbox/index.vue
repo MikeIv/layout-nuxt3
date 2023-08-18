@@ -44,8 +44,6 @@
 
       <br>
 
-      <br>
-
       <ul class="sandbox__list">
         <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
           <p>{{ item.name }}</p>
@@ -74,6 +72,7 @@ import {register} from 'swiper/element/bundle';
 import {useFetch} from "nuxt/app";
 import {dataBank} from "../../server/api/dataBank";
 import {typeComponentsTitle} from "../../composables/sandbox/typeComponentsTitle";
+import {provide} from "vue";
 
 register();
 
@@ -139,6 +138,12 @@ if (process.client) {
   console.log('window:', window);
   console.log('global:', globalThis);
 }
+
+
+// Inject
+const userData = inject('userData')
+console.log('USER@@: ', userData)
+
 </script>
 
 <style lang="scss">
