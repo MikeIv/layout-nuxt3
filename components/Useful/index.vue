@@ -58,5 +58,5 @@
 <script setup></script>
 
 <style lang="scss">
-@import './useful.scss';
+@import 'useful.scss';
 </style>

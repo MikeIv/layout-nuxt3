@@ -1,8 +1,6 @@
 <template>
   <section class="console layout-useful__wrapper">
-    <NuxtLink to="/useful" class="console__btn-back">
-      <span class="a-font__s">назад</span>
-    </NuxtLink>
+    <CommonButtonBack link="/useful" />
     <h1 class="console__header hidden">Консольные команды</h1>
     <h2 class="console__title a-font__h3">Консоль</h2>
     <h2 class="console__subtitle a-font__h4">File exist</h2>

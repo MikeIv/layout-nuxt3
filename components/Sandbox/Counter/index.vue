@@ -1,8 +1,6 @@
 <template>
   <section class="drag-cards layout-useful__wrapper">
-    <NuxtLink to="/sandbox" class="drag-cards__btn-back">
-      <span class="a-font__s">назад</span>
-    </NuxtLink>
+    <CommonButtonBack link="/sandbox" />
     <h2>{{ $route.params }} – Типы счетчиков</h2>
     <div class="sandbox__section">
       <h3 class="sandbox__label a-font__h3">{{ storeCounter.title }}:</h3>
@@ -41,6 +39,9 @@
 <script setup>
 import {watch, watchEffect} from 'vue'
 import {useCounterStore} from '@/stores/counter';
+
+
+
 const route = useRoute();
 
 /*
@@ -96,10 +97,10 @@ watch(() => counterData.count, (newCount) => {
   }
 })
 
-// Autofocus
-const vFocus = {
-  mounted: (el) => el.focus()
-}
+// Autofocus local
+// const vFocus = {
+//   mounted: (el) => el.focus()
+// }
 
 </script>
 
