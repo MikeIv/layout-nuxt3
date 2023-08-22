@@ -67,12 +67,9 @@
 </template>
 
 <script setup>
-import {checkResult} from '@/composables/sandbox/checkResult';
 import {register} from 'swiper/element/bundle';
 import {useFetch} from "nuxt/app";
-import {dataBank} from "../../server/api/dataBank";
-import {typeComponentsTitle} from "../../composables/sandbox/typeComponentsTitle";
-import {provide} from "vue";
+import {dataBank} from "@/server/api/dataBank";
 
 register();
 
@@ -80,7 +77,7 @@ const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
 
 // Components Title
-const {listItems} =typeComponentsTitle()
+const { listItems } = componentsTitle()
 
 
 /*
