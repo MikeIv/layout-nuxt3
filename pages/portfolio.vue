@@ -1,3 +1,3 @@
 <template>
-  <Portfolio />
+  <PagesPortfolio />
 </template>

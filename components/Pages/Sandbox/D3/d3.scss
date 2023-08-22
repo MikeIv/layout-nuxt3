@@ -1,0 +1,15 @@
+.d3 {
+
+  &__link {
+    margin: 0 auto rem(30);
+    color: var(--a-accentText);
+
+    &:hover {
+      color: var(--a-headerText)
+    }
+
+    &-icon {
+      margin-left: rem(10);
+    }
+  }
+}

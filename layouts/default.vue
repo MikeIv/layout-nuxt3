@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Header />
+    <LayoutsHeader />
     <NuxtLink to="/">
       <img src="~/assets/images/my-logo.svg" alt="My Logo" class="layout__logo" />
     </NuxtLink>
