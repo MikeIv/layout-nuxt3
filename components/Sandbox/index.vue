@@ -44,8 +44,6 @@
 
       <br>
 
-      <br>
-
       <ul class="sandbox__list">
         <li class="sandbox__item" v-for="item in $tm('portfolio')" :key="item">
           <p>{{ item.name }}</p>
@@ -69,11 +67,9 @@
 </template>
 
 <script setup>
-import {checkResult} from '@/composables/sandbox/checkResult';
 import {register} from 'swiper/element/bundle';
 import {useFetch} from "nuxt/app";
-import {dataBank} from "../../server/api/dataBank";
-import {typeComponentsTitle} from "../../composables/sandbox/typeComponentsTitle";
+import {dataBank} from "@/server/api/dataBank";
 
 register();
 
@@ -81,7 +77,7 @@ const { $sayWord } = useNuxtApp();
 $sayWord('это проверка работы функции');
 
 // Components Title
-const {listItems} =typeComponentsTitle()
+const { listItems } = componentsTitle()
 
 
 /*
@@ -139,6 +135,12 @@ if (process.client) {
   console.log('window:', window);
   console.log('global:', globalThis);
 }
+
+
+// Inject
+const userData = inject('userData')
+console.log('USER@@: ', userData)
+
 </script>
 
 <style lang="scss">

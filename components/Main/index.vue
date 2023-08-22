@@ -18,7 +18,7 @@
 
     <MainNav />
 
-    <p class="main__attention a-font__s">{{ $t('info.develop') }} <span>(v0.1.8)</span></p>
+    <p class="main__attention a-font__s">{{ $t('info.develop') }} <span>(v0.1.9)</span></p>
   </section>
 </template>
 
@@ -35,6 +35,7 @@ const switchLocalePath = useSwitchLocalePath();
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value);
 });
+
 </script>
 
 <style lang="scss">

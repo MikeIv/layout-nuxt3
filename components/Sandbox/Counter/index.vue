@@ -1,7 +1,8 @@
 <template>
   <section class="drag-cards layout-useful__wrapper">
     <CommonButtonBack link="/sandbox" />
-    <h2>{{ $route.params }} – Типы счетчиков</h2>
+    <CommonHeader title="Типы счетчиков" />
+    <h2>{{ $route.params }}</h2>
     <div class="sandbox__section">
       <h3 class="sandbox__label a-font__h3">{{ storeCounter.title }}:</h3>
       <button class="sandbox__btn-count a-font__h2" @click="storeCounter.decreaseCount">-</button>

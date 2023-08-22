@@ -16,6 +16,7 @@
     "@vueuse/core": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
     "autoprefixer": "^10.4.14",
+    "d3": "^7.8.5",
     "nuxt": "^3.2.3",
     "nuxt-icon": "^0.3.3",
     "postcss": "^8.4.21",
@@ -28,7 +29,8 @@
   "dependencies": {
     "nuxt-icons": "^3.2.1",
     "pinia": "^2.0.33",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "vue": "^3.3.4"
   },
   "overrides": {
     "vue": "latest"

@@ -1,4 +1,4 @@
-export const typeComponentsTitle = () => {
+export const componentsTitle = () => {
     const listItems = ref([
         {
             id: 1,
@@ -14,6 +14,11 @@ export const typeComponentsTitle = () => {
             id: 3,
             name: 'Teleport',
             path: '/sandbox/samples/teleport'
+        },
+        {
+            id: 3,
+            name: 'D3',
+            path: '/sandbox/samples/d3'
         },
     ]);
 

@@ -3,6 +3,7 @@
     <div class="modal" v-if="modelValue">
       <h2 class="modal__header a-font__h2"><slot name="title" /></h2>
       <h2 class="modal__header a-font__h2">{{ header }}</h2>
+      <p>{{ userData.username }}</p>
       <slot></slot>
       <AButton @click="handleButtonClick" bgColor="accent" label="Скрыть окно" size="medium"
                class="modal__button" />
@@ -29,6 +30,10 @@ const emit = defineEmits(['update:modelValue'])
 const handleButtonClick = () => {
   emit('update:modelValue', false)
 }
+
+// Inject
+const userData = inject('userData')
+console.log('USER: ', userData)
 
 </script>
 

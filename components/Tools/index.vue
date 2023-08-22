@@ -23,7 +23,7 @@
       </ul>
     </div>
     <section class="tools__content">
-      <div class="tools__section" :id="item.id" v-for="(item, index) in toolsContent" :key="index">
+      <div class="tools__section" :id="item.id" v-for="(item, index) in toolsDescription" :key="index">
         <div class="tools__logo-wrapper">
           <nuxt-icon :name="item.icon" filled />
         </div>
@@ -64,17 +64,17 @@
 </template>
 
 <script setup lang="ts">
-import Alink from '~/components/_ui/ALink/a_link.vue';
+import Alink from '@/components/_ui/ALink/a_link.vue';
 
 const titleList = ref<Array<typeToolsTitle>>()
 const titleData = reactive(titleList)
 
 const { toolsTitle } = toolsTitleList();
 titleList.value = toolsTitle;
+console.log('titleList', titleList);
 console.log('titleData', titleData);
 
 const { toolsDescription } = toolsData();
-const toolsContent = toolsDescription.value;
 </script>
 
 <style lang="scss">
