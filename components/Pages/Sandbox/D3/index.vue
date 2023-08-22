@@ -6,6 +6,7 @@
       <nuxt-icon name="link" filled class="d3__link-icon" />
     </UIALink>
 
+
     <div id="container"></div>
 
   </section>
@@ -16,6 +17,13 @@
 import * as d3 from 'd3'
 import {onMounted, reactive, ref} from "vue";
 
+import userData from '/content/dataP.json'
+
+const data  = userData
+console.log('LINK: ', data)
+
+
+
 
 const dataD3 = ref()
 const d3Data = reactive(dataD3)
@@ -25,38 +33,56 @@ dataD3.value = listData;
 
 
 onMounted(() => {
-// Declare the chart dimensions and margins.
-  const width = 740;
-  const height = 400;
-  const marginTop = 20;
-  const marginRight = 20;
-  const marginBottom = 30;
-  const marginLeft = 40;
+  const width = 950
+  const height = Math.min(width, 700);
+  const radius = Math.min(width, height) / 2;
 
-// Declare the x (horizontal position) scale.
-  const x = d3.scaleUtc()
-      .domain([new Date("2023-01-01"), new Date("2024-01-01")])
-      .range([marginLeft, width - marginRight]);
+  const arc = d3.arc()
+      .innerRadius(radius * 0.67)
+      .outerRadius(radius - 1);
 
-// Declare the y (vertical position) scale.
-  const y = d3.scaleLinear()
-      .domain([0, 100])
-      .range([height - marginBottom, marginTop]);
+  const pie = d3.pie()
+      .padAngle(1 / radius)
+      .sort(null)
+      .value(d => d.value);
 
-// Create the SVG container.
+  const color = d3.scaleOrdinal()
+      .domain(data.map(d => d.name))
+      .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), data.length).reverse());
+
   const svg = d3.create("svg")
       .attr("width", width)
-      .attr("height", height);
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto;");
 
-// Add the x-axis.
   svg.append("g")
-      .attr("transform", `translate(0,${height - marginBottom})`)
-      .call(d3.axisBottom(x));
+      .selectAll()
+      .data(pie(data))
+      .join("path")
+      .attr("fill", d => color(d.data.name))
+      .attr("d", arc)
+      .append("title")
+      .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
 
-// Add the y-axis.
   svg.append("g")
-      .attr("transform", `translate(${marginLeft},0)`)
-      .call(d3.axisLeft(y));
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 12)
+      .attr("text-anchor", "middle")
+      .selectAll()
+      .data(pie(data))
+      .join("text")
+      .attr("transform", d => `translate(${arc.centroid(d)})`)
+      .call(text => text.append("tspan")
+          .attr("y", "-0.4em")
+          .attr("font-weight", "bold")
+          .text(d => d.data.name))
+      .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
+          .attr("x", 0)
+          .attr("y", "0.7em")
+          .attr("fill-opacity", 0.7)
+          .text(d => d.data.value.toLocaleString("en-US")));
+
 
 // Append the SVG element.
   container.append(svg.node());
