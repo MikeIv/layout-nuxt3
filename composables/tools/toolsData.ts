@@ -65,6 +65,7 @@ export const toolsData = () => {
         { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
         { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
         { text: 'Email framework', href: 'https://get.foundation/index.html' },
+        { text: 'Fonts to woff2', href: 'https://transfonter.org/' },
       ],
     },
     {
