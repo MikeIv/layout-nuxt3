@@ -6,5 +6,5 @@
 <!--</script>-->
 
 <template>
-  <Tools />
+  <PagesTools />
 </template>

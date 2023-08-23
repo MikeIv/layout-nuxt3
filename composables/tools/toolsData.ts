@@ -35,7 +35,7 @@ export const toolsData = () => {
       plugIn: [],
       links: [
         { text: 'Fake API', href: 'https://fakestoreapi.com/' },
-        { text: 'Настройка ESLint', href: 'https://webinmind.ru/nuxtjs/moduli/nastrojka-eslint-ot-airbnb-i-nuxtjs' },
+        { text: 'Настройка ESLint and Prettier', href: 'https://dev.to/tao/series/21187' },
         {
           text: 'Commitizen and husky',
           href: 'https://rdevelab.ru/blog/no-category/post/git-commits-lint-with-commitlint-and-husky',
@@ -65,6 +65,7 @@ export const toolsData = () => {
         { text: 'Структура HTML-документа', href: 'https://habr.com/ru/company/macloud/blog/555082/' },
         { text: 'Теги и атрибуты', href: 'https://habr.com/ru/company/macloud/blog/555400/' },
         { text: 'Email framework', href: 'https://get.foundation/index.html' },
+        { text: 'Fonts to woff2', href: 'https://transfonter.org/' },
       ],
     },
     {

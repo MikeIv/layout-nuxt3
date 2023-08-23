@@ -6,5 +6,5 @@ definePageMeta({
 </script>
 
 <template>
-  <SandboxD3/>
+  <PagesSandboxD3/>
 </template>
