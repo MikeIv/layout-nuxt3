@@ -35,7 +35,7 @@ export const toolsData = () => {
       plugIn: [],
       links: [
         { text: 'Fake API', href: 'https://fakestoreapi.com/' },
-        { text: 'Настройка ESLint', href: 'https://webinmind.ru/nuxtjs/moduli/nastrojka-eslint-ot-airbnb-i-nuxtjs' },
+        { text: 'Настройка ESLint and Prettier', href: 'https://dev.to/tao/series/21187' },
         {
           text: 'Commitizen and husky',
           href: 'https://rdevelab.ru/blog/no-category/post/git-commits-lint-with-commitlint-and-husky',
