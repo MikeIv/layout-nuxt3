@@ -98,6 +98,10 @@ watch(() => counterData.count, (newCount) => {
   }
 })
 
+// Autofocus local
+// const vFocus = {
+//   mounted: (el) => el.focus()
+// }
 
 </script>
 
