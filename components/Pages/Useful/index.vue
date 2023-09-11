@@ -50,6 +50,12 @@
             <span class="a-font__s">Html</span>
           </NuxtLink>
         </li>
+        <li class="useful__block-item">
+          <NuxtLink to="/useful/articles/js" class="useful__block-link a-font__m">
+            <nuxt-icon name="articlesLtr" filled />
+            <span class="a-font__s">Js</span>
+          </NuxtLink>
+        </li>
       </ul>
     </div>
   </section>

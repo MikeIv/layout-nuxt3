@@ -1,4 +1,4 @@
-export const snippetCssData = () => {
+export const snippetRemData = () => {
   const remFunc = ref(
     '' +
       "@use 'sass:math';\n" +

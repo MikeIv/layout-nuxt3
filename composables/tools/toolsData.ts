@@ -80,6 +80,7 @@ export const toolsData = () => {
         { text: 'Трюки CSS', href: 'https://habr.com/ru/company/macloud/blog/557796/' },
         { text: 'SVG иконки', href: 'https://icones.js.org/' },
         { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
+        { text: 'CSS Анимации', href: 'https://animista.net/' },
       ],
     },
     {

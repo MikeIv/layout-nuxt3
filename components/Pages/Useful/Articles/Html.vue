@@ -9,7 +9,7 @@
         Атрибут role в HTML5 позволяет наиболее четко указать семантическое предназначение блока/элемента страницы при
         взаимодействии пользователя с сайтом.
       </blockquote>
-      <a class="articles__info-link a-font__m" href="http://sauron.org.ua/post/823" target="_blank">подробнее</a>
+      <a class="articles__info-link a-font__m" href="http://sauron.org.ua/post/823" target="_blank">подробнее...</a>
     </div>
     <h3 class="articles__title a-font__h3">Видео</h3>
     <div class="articles__info">
@@ -19,7 +19,7 @@
         class="articles__info-link a-font__m"
         href="https://www.youtube.com/watch?v=diULmp4dYdE&list=PLR_ZJO3q73HalAe5sRs7ByjHvptmbflsL&index=6"
         target="_blank"
-        >подробнее</a
+        >подробнее...</a
       >
     </div>
   </section>
