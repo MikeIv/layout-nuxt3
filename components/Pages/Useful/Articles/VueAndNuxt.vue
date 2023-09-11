@@ -12,7 +12,7 @@
         class="articles__info-link a-font__m"
         href="https://badtry.net/nachalo-raboty-s-axios-v-nuxt/VueAndNuxt.vue"
         target="_blank"
-        >подробнее</a
+        >подробнее...</a
       >
     </div>
     <div class="articles__info">
@@ -23,12 +23,12 @@
           class="articles__info-link a-font__m"
           href="https://habr.com/ru/companies/simbirsoft/articles/697910/"
           target="_blank"
-      >подробнее</a
+      >подробнее...</a
       > <a
           class="articles__info-link a-font__m"
           href="https://www.thisdot.co/blog/vue-3-composition-api-watch-and-watcheffect/"
           target="_blank"
-      >подробнее</a>
+      >подробнее...</a>
       </div>
 
     </div>
