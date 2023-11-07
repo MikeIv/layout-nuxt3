@@ -70,8 +70,6 @@ const titleData = reactive(titleList)
 
 const { toolsTitle } = toolsTitleList();
 titleList.value = toolsTitle;
-console.log('titleList', titleList);
-console.log('titleData', titleData);
 
 const { toolsDescription } = toolsData();
 </script>

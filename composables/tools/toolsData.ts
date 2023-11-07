@@ -81,6 +81,7 @@ export const toolsData = () => {
         { text: 'SVG иконки', href: 'https://icones.js.org/' },
         { text: 'Оптимизация изображений', href: 'https://tinyjpg.com/' },
         { text: 'CSS Анимации', href: 'https://animista.net/' },
+        { text: 'CSS Генераторы', href: 'https://techrocks.ru/2022/09/02/css-code-generators' },
       ],
     },
     {
